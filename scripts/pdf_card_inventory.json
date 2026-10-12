@@ -1,0 +1,1008 @@
+[
+  {
+    "page": 1,
+    "pos": 1,
+    "name_printed": "Mewtwo",
+    "series_printed": "Pokemon",
+    "tier": "Legendary",
+    "border": "orange",
+    "card_number": 1,
+    "crop_file": "card_01_p1_1.png"
+  },
+  {
+    "page": 1,
+    "pos": 2,
+    "name_printed": "Alien X",
+    "series_printed": "Ben 10",
+    "tier": "Legendary",
+    "border": "orange",
+    "card_number": 2,
+    "crop_file": "card_02_p1_2.png"
+  },
+  {
+    "page": 1,
+    "pos": 3,
+    "name_printed": "Muzan",
+    "series_printed": "Demon Slayer",
+    "tier": "Legendary",
+    "border": "orange",
+    "notes": "Shows real person photo (Michael Jackson) instead of anime character",
+    "card_number": 3,
+    "crop_file": "card_03_p1_3.png"
+  },
+  {
+    "page": 1,
+    "pos": 4,
+    "name_printed": "Beerus",
+    "series_printed": "Dragon Ball Z",
+    "tier": "Legendary",
+    "border": "orange",
+    "card_number": 4,
+    "crop_file": "card_04_p1_4.png"
+  },
+  {
+    "page": 1,
+    "pos": 5,
+    "name_printed": "Goku",
+    "series_printed": "Dragon Ball Z",
+    "tier": "Legendary",
+    "border": "orange",
+    "card_number": 5,
+    "crop_file": "card_05_p1_5.png"
+  },
+  {
+    "page": 1,
+    "pos": 6,
+    "name_printed": "Satoru Gojo",
+    "series_printed": "Jujutsu Kaisen",
+    "tier": "Legendary",
+    "border": "orange",
+    "card_number": 6,
+    "crop_file": "card_06_p1_6.png"
+  },
+  {
+    "page": 1,
+    "pos": 7,
+    "name_printed": "Eren",
+    "series_printed": "Attack on Titan",
+    "tier": "Legendary",
+    "border": "orange",
+    "card_number": 7,
+    "crop_file": "card_07_p1_7.png"
+  },
+  {
+    "page": 1,
+    "pos": 8,
+    "name_printed": "Hornet",
+    "series_printed": "Hollow Knight",
+    "tier": "Legendary",
+    "border": "orange",
+    "card_number": 8,
+    "crop_file": "card_08_p1_8.png"
+  },
+  {
+    "page": 1,
+    "pos": 9,
+    "name_printed": "Madara",
+    "series_printed": "Naruto",
+    "tier": "Legendary",
+    "border": "orange",
+    "card_number": 9,
+    "crop_file": "card_09_p1_9.png"
+  },
+  {
+    "page": 2,
+    "pos": 1,
+    "name_printed": "Erwin",
+    "series_printed": "Attack on Titan",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 10,
+    "crop_file": "card_10_p2_1.png"
+  },
+  {
+    "page": 2,
+    "pos": 2,
+    "name_printed": "Broly",
+    "series_printed": "DB",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 11,
+    "crop_file": "card_11_p2_2.png"
+  },
+  {
+    "page": 2,
+    "pos": 3,
+    "name_printed": "Charizard",
+    "series_printed": "Pokemon",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 12,
+    "crop_file": "card_12_p2_3.png"
+  },
+  {
+    "page": 2,
+    "pos": 4,
+    "name_printed": "Reiner",
+    "series_printed": "Attack on Titan",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 13,
+    "crop_file": "card_13_p2_4.png"
+  },
+  {
+    "page": 2,
+    "pos": 5,
+    "name_printed": "Itadori",
+    "series_printed": "JJK",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 14,
+    "crop_file": "card_14_p2_5.png"
+  },
+  {
+    "page": 2,
+    "pos": 6,
+    "name_printed": "Gohan",
+    "series_printed": "DB",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 15,
+    "crop_file": "card_15_p2_6.png"
+  },
+  {
+    "page": 2,
+    "pos": 7,
+    "name_printed": "Rengoku",
+    "series_printed": "Demon Slayer",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 16,
+    "crop_file": "card_16_p2_7.png"
+  },
+  {
+    "page": 2,
+    "pos": 8,
+    "name_printed": "Whis",
+    "series_printed": "DB",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 17,
+    "crop_file": "card_17_p2_8.png"
+  },
+  {
+    "page": 2,
+    "pos": 9,
+    "name_printed": "Yuta",
+    "series_printed": "JJK",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 18,
+    "crop_file": "card_18_p2_9.png"
+  },
+  {
+    "page": 3,
+    "pos": 1,
+    "name_printed": "Sukuna",
+    "series_printed": "Jujutsu Kaisen",
+    "tier": "Legendary",
+    "border": "orange",
+    "notes": "Legendary sitting among Rares on page 3",
+    "card_number": 19,
+    "crop_file": "card_19_p3_1.png"
+  },
+  {
+    "page": 3,
+    "pos": 2,
+    "name_printed": "Giyu",
+    "series_printed": "Demon Slayer",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 20,
+    "crop_file": "card_20_p3_2.png"
+  },
+  {
+    "page": 3,
+    "pos": 3,
+    "name_printed": "Freiza",
+    "canonical_name": "Frieza",
+    "series_printed": "DB",
+    "tier": "Rare",
+    "border": "silver",
+    "typo": "Freiza -> Frieza",
+    "card_number": 21,
+    "crop_file": "card_21_p3_3.png"
+  },
+  {
+    "page": 3,
+    "pos": 4,
+    "name_printed": "Gengar",
+    "series_printed": "Pokemon",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 22,
+    "crop_file": "card_22_p3_4.png"
+  },
+  {
+    "page": 3,
+    "pos": 5,
+    "name_printed": "Vegeta",
+    "series_printed": "DB",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 23,
+    "crop_file": "card_23_p3_5.png"
+  },
+  {
+    "page": 3,
+    "pos": 6,
+    "name_printed": "Mikasa",
+    "series_printed": "Attack on Titan",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 24,
+    "crop_file": "card_24_p3_6.png"
+  },
+  {
+    "page": 3,
+    "pos": 7,
+    "name_printed": "Four Arms",
+    "series_printed": "Ben 10",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 25,
+    "crop_file": "card_25_p3_7.png"
+  },
+  {
+    "page": 3,
+    "pos": 8,
+    "name_printed": "XLRS",
+    "canonical_name": "XLR8",
+    "series_printed": "Ben 10",
+    "tier": "Rare",
+    "border": "silver",
+    "typo": "XLRS -> XLR8",
+    "card_number": 26,
+    "crop_file": "card_26_p3_8.png"
+  },
+  {
+    "page": 3,
+    "pos": 9,
+    "name_printed": "Armin",
+    "series_printed": "Attack on Titan",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 27,
+    "crop_file": "card_27_p3_9.png"
+  },
+  {
+    "page": 4,
+    "pos": 1,
+    "name_printed": "Diamondhead",
+    "series_printed": "Ben 10",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 28,
+    "crop_file": "card_28_p4_1.png"
+  },
+  {
+    "page": 4,
+    "pos": 2,
+    "name_printed": "Megumi",
+    "series_printed": "JJK",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 29,
+    "crop_file": "card_29_p4_2.png"
+  },
+  {
+    "page": 4,
+    "pos": 3,
+    "name_printed": "Heatblast",
+    "series_printed": "Ben 10",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 30,
+    "crop_file": "card_30_p4_3.png"
+  },
+  {
+    "page": 4,
+    "pos": 4,
+    "name_printed": "Snorlax",
+    "series_printed": "Pokemon",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 31,
+    "crop_file": "card_31_p4_4.png"
+  },
+  {
+    "page": 4,
+    "pos": 5,
+    "name_printed": "Tanjiro",
+    "series_printed": "Demon Slayer",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 32,
+    "crop_file": "card_32_p4_5.png"
+  },
+  {
+    "page": 4,
+    "pos": 6,
+    "name_printed": "Pikachu",
+    "series_printed": "Pokemon",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 33,
+    "crop_file": "card_33_p4_6.png"
+  },
+  {
+    "page": 4,
+    "pos": 7,
+    "name_printed": "Nobara",
+    "series_printed": "JJK",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 34,
+    "crop_file": "card_34_p4_7.png"
+  },
+  {
+    "page": 4,
+    "pos": 8,
+    "name_printed": "Nezuko",
+    "series_printed": "Demon Slayer",
+    "tier": "Rare",
+    "border": "silver",
+    "card_number": 35,
+    "crop_file": "card_35_p4_8.png"
+  },
+  {
+    "page": 4,
+    "pos": 9,
+    "name_printed": "Falco",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 36,
+    "crop_file": "card_36_p4_9.png"
+  },
+  {
+    "page": 5,
+    "pos": 1,
+    "name_printed": "Machamp",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 37,
+    "crop_file": "card_37_p5_1.png"
+  },
+  {
+    "page": 5,
+    "pos": 2,
+    "name_printed": "Alakazam",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 38,
+    "crop_file": "card_38_p5_2.png"
+  },
+  {
+    "page": 5,
+    "pos": 3,
+    "name_printed": "Bulbasaur",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 39,
+    "crop_file": "card_39_p5_3.png"
+  },
+  {
+    "page": 5,
+    "pos": 4,
+    "name_printed": "Geodude",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 40,
+    "crop_file": "card_40_p5_4.png"
+  },
+  {
+    "page": 5,
+    "pos": 5,
+    "name_printed": "Porygon",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 41,
+    "crop_file": "card_41_p5_5.png"
+  },
+  {
+    "page": 5,
+    "pos": 6,
+    "name_printed": "Ditto",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 42,
+    "crop_file": "card_42_p5_6.png"
+  },
+  {
+    "page": 5,
+    "pos": 7,
+    "name_printed": "Stinkfly",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 43,
+    "crop_file": "card_43_p5_7.png"
+  },
+  {
+    "page": 5,
+    "pos": 8,
+    "name_printed": "Ghostfreak",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 44,
+    "crop_file": "card_44_p5_8.png"
+  },
+  {
+    "page": 5,
+    "pos": 9,
+    "name_printed": "Wildbutt",
+    "canonical_name": "Wildmutt",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "typo": "Wildbutt -> Wildmutt",
+    "card_number": 45,
+    "crop_file": "card_45_p5_9.png"
+  },
+  {
+    "page": 6,
+    "pos": 1,
+    "name_printed": "Zenitsu",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 46,
+    "crop_file": "card_46_p6_1.png"
+  },
+  {
+    "page": 6,
+    "pos": 2,
+    "name_printed": "Inosuke",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 47,
+    "crop_file": "card_47_p6_2.png"
+  },
+  {
+    "page": 6,
+    "pos": 3,
+    "name_printed": "Gyutaro",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 48,
+    "crop_file": "card_48_p6_3.png"
+  },
+  {
+    "page": 6,
+    "pos": 4,
+    "name_printed": "Android 18",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 49,
+    "crop_file": "card_49_p6_4.png"
+  },
+  {
+    "page": 6,
+    "pos": 5,
+    "name_printed": "Cell",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 50,
+    "crop_file": "card_50_p6_5.png"
+  },
+  {
+    "page": 6,
+    "pos": 6,
+    "name_printed": "Majin Buu",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 51,
+    "crop_file": "card_51_p6_6.png"
+  },
+  {
+    "page": 6,
+    "pos": 7,
+    "name_printed": "Todo",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 52,
+    "crop_file": "card_52_p6_7.png"
+  },
+  {
+    "page": 6,
+    "pos": 8,
+    "name_printed": "Geto",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 53,
+    "crop_file": "card_53_p6_8.png"
+  },
+  {
+    "page": 6,
+    "pos": 9,
+    "name_printed": "Mahito",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 54,
+    "crop_file": "card_54_p6_9.png"
+  },
+  {
+    "page": 7,
+    "pos": 1,
+    "name_printed": "Squirtle",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 55,
+    "crop_file": "card_55_p7_1.png"
+  },
+  {
+    "page": 7,
+    "pos": 2,
+    "name_printed": "Eevee",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 56,
+    "crop_file": "card_56_p7_2.png"
+  },
+  {
+    "page": 7,
+    "pos": 3,
+    "name_printed": "Magikarp",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 57,
+    "crop_file": "card_57_p7_3.png"
+  },
+  {
+    "page": 7,
+    "pos": 4,
+    "name_printed": "Grey Matter",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 58,
+    "crop_file": "card_58_p7_4.png"
+  },
+  {
+    "page": 7,
+    "pos": 5,
+    "name_printed": "Upgrade",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 59,
+    "crop_file": "card_59_p7_5.png"
+  },
+  {
+    "page": 7,
+    "pos": 6,
+    "name_printed": "Way Big",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 60,
+    "crop_file": "card_60_p7_6.png"
+  },
+  {
+    "page": 7,
+    "pos": 7,
+    "name_printed": "Cannonbolt",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 61,
+    "crop_file": "card_61_p7_7.png"
+  },
+  {
+    "page": 7,
+    "pos": 8,
+    "name_printed": "Echo",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 62,
+    "crop_file": "card_62_p7_8.png"
+  },
+  {
+    "page": 7,
+    "pos": 9,
+    "name_printed": "Shinobu",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 63,
+    "crop_file": "card_63_p7_9.png"
+  },
+  {
+    "page": 8,
+    "pos": 1,
+    "name_printed": "Jigglypuff",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 64,
+    "crop_file": "card_64_p8_1.png"
+  },
+  {
+    "page": 8,
+    "pos": 2,
+    "name_printed": "Meowth",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 65,
+    "crop_file": "card_65_p8_2.png"
+  },
+  {
+    "page": 8,
+    "pos": 3,
+    "name_printed": "Psyduck",
+    "series_printed": "Pokemon",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 66,
+    "crop_file": "card_66_p8_3.png"
+  },
+  {
+    "page": 8,
+    "pos": 4,
+    "name_printed": "Swampfire",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 67,
+    "crop_file": "card_67_p8_4.png"
+  },
+  {
+    "page": 8,
+    "pos": 5,
+    "name_printed": "Humangasaur",
+    "canonical_name": "Humungousaur",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "typo": "Humangasaur -> Humungousaur",
+    "card_number": 68,
+    "crop_file": "card_68_p8_5.png"
+  },
+  {
+    "page": 8,
+    "pos": 6,
+    "name_printed": "Ripjaws",
+    "series_printed": "Ben 10",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 69,
+    "crop_file": "card_69_p8_6.png"
+  },
+  {
+    "page": 8,
+    "pos": 7,
+    "name_printed": "Uzui",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 70,
+    "crop_file": "card_70_p8_7.png"
+  },
+  {
+    "page": 8,
+    "pos": 8,
+    "name_printed": "Akaza",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 71,
+    "crop_file": "card_71_p8_8.png"
+  },
+  {
+    "page": 8,
+    "pos": 9,
+    "name_printed": "Doma",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 72,
+    "crop_file": "card_72_p8_9.png"
+  },
+  {
+    "page": 9,
+    "pos": 1,
+    "name_printed": "Haganezuka",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 73,
+    "crop_file": "card_73_p9_1.png"
+  },
+  {
+    "page": 9,
+    "pos": 2,
+    "name_printed": "Picollo",
+    "canonical_name": "Piccolo",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "notes": "Labeled 'Demon Slayer' although it belongs to Dragon Ball",
+    "typo": "Picollo -> Piccolo",
+    "card_number": 74,
+    "crop_file": "card_74_p9_2.png"
+  },
+  {
+    "page": 9,
+    "pos": 3,
+    "name_printed": "Trunks",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 75,
+    "crop_file": "card_75_p9_3.png"
+  },
+  {
+    "page": 9,
+    "pos": 4,
+    "name_printed": "Satan",
+    "canonical_name": "Mr. Satan",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 76,
+    "crop_file": "card_76_p9_4.png"
+  },
+  {
+    "page": 9,
+    "pos": 5,
+    "name_printed": "Shenron",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 77,
+    "crop_file": "card_77_p9_5.png"
+  },
+  {
+    "page": 9,
+    "pos": 6,
+    "name_printed": "Nanami",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 78,
+    "crop_file": "card_78_p9_6.png"
+  },
+  {
+    "page": 9,
+    "pos": 7,
+    "name_printed": "Jogo",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 79,
+    "crop_file": "card_79_p9_7.png"
+  },
+  {
+    "page": 9,
+    "pos": 8,
+    "name_printed": "Hanami",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 80,
+    "crop_file": "card_80_p9_8.png"
+  },
+  {
+    "page": 9,
+    "pos": 9,
+    "name_printed": "Choso",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 81,
+    "crop_file": "card_81_p9_9.png"
+  },
+  {
+    "page": 10,
+    "pos": 1,
+    "name_printed": "Daki",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 82,
+    "crop_file": "card_82_p10_1.png"
+  },
+  {
+    "page": 10,
+    "pos": 2,
+    "name_printed": "Kanao",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 83,
+    "crop_file": "card_83_p10_2.png"
+  },
+  {
+    "page": 10,
+    "pos": 3,
+    "name_printed": "Genya",
+    "series_printed": "Demon Slayer",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 84,
+    "crop_file": "card_84_p10_3.png"
+  },
+  {
+    "page": 10,
+    "pos": 4,
+    "name_printed": "Krillin",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 85,
+    "crop_file": "card_85_p10_4.png"
+  },
+  {
+    "page": 10,
+    "pos": 5,
+    "name_printed": "Roshi",
+    "canonical_name": "Master Roshi",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 86,
+    "crop_file": "card_86_p10_5.png"
+  },
+  {
+    "page": 10,
+    "pos": 6,
+    "name_printed": "Bulma",
+    "series_printed": "DB",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 87,
+    "crop_file": "card_87_p10_6.png"
+  },
+  {
+    "page": 10,
+    "pos": 7,
+    "name_printed": "Panda",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 88,
+    "crop_file": "card_88_p10_7.png"
+  },
+  {
+    "page": 10,
+    "pos": 8,
+    "name_printed": "Toge",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 89,
+    "crop_file": "card_89_p10_8.png"
+  },
+  {
+    "page": 10,
+    "pos": 9,
+    "name_printed": "Maki",
+    "series_printed": "JJK",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 90,
+    "crop_file": "card_90_p10_9.png"
+  },
+  {
+    "page": 11,
+    "pos": 1,
+    "name_printed": "Hange",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 91,
+    "crop_file": "card_91_p11_1.png"
+  },
+  {
+    "page": 11,
+    "pos": 2,
+    "name_printed": "Zeke",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 92,
+    "crop_file": "card_92_p11_2.png"
+  },
+  {
+    "page": 11,
+    "pos": 3,
+    "name_printed": "Annie",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 93,
+    "crop_file": "card_93_p11_3.png"
+  },
+  {
+    "page": 11,
+    "pos": 4,
+    "name_printed": "Gabi",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 94,
+    "crop_file": "card_94_p11_4.png"
+  },
+  {
+    "page": 11,
+    "pos": 5,
+    "name_printed": "Reiss",
+    "canonical_name": "Historia Reiss",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 95,
+    "crop_file": "card_95_p11_5.png"
+  },
+  {
+    "page": 11,
+    "pos": 6,
+    "name_printed": "Pieck",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 96,
+    "crop_file": "card_96_p11_6.png"
+  },
+  {
+    "page": 11,
+    "pos": 7,
+    "name_printed": "Sasha",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 97,
+    "crop_file": "card_97_p11_7.png"
+  },
+  {
+    "page": 11,
+    "pos": 8,
+    "name_printed": "Jean",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 98,
+    "crop_file": "card_98_p11_8.png"
+  },
+  {
+    "page": 11,
+    "pos": 9,
+    "name_printed": "Connie",
+    "series_printed": "AOT",
+    "tier": "Common",
+    "border": "pink/purple",
+    "card_number": 99,
+    "crop_file": "card_99_p11_9.png"
+  }
+]
