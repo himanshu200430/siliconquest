@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:targets": "python ../scripts/detection/build_targets.py",
     "start": "next start",
     "lint": "eslint"
   },

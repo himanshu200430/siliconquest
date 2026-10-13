@@ -1,0 +1,4419 @@
+{
+  "totalTargets": 99,
+  "avgFeaturePoints": 57.8,
+  "avgCoveragePct": 92.9,
+  "lowest15Percent": [
+    {
+      "cardId": "char_060",
+      "name": "Way Big",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/way-big.png",
+      "totalFeaturePoints": 26,
+      "matchingPoints": 9,
+      "occupiedCells": 10,
+      "totalCells": 16,
+      "coveragePct": 62.5,
+      "gridDistribution": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          8,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_048",
+      "name": "Gyutaro",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/gyutaro.png",
+      "totalFeaturePoints": 33,
+      "matchingPoints": 9,
+      "occupiedCells": 10,
+      "totalCells": 16,
+      "coveragePct": 62.5,
+      "gridDistribution": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          2,
+          1
+        ],
+        [
+          2,
+          6,
+          1,
+          0
+        ],
+        [
+          0,
+          7,
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_003",
+      "name": "Muzan",
+      "series": "Demon Slayer",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/muzan.png",
+      "totalFeaturePoints": 35,
+      "matchingPoints": 9,
+      "occupiedCells": 12,
+      "totalCells": 16,
+      "coveragePct": 75.0,
+      "gridDistribution": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          4,
+          6,
+          2
+        ],
+        [
+          0,
+          4,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_026",
+      "name": "XLR8",
+      "series": "Ben 10",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/xlr8.png",
+      "totalFeaturePoints": 36,
+      "matchingPoints": 9,
+      "occupiedCells": 12,
+      "totalCells": 16,
+      "coveragePct": 75.0,
+      "gridDistribution": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          5,
+          4
+        ],
+        [
+          5,
+          4,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_055",
+      "name": "Squirtle",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/squirtle.png",
+      "totalFeaturePoints": 40,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          1,
+          0,
+          2
+        ],
+        [
+          5,
+          3,
+          5,
+          2
+        ],
+        [
+          6,
+          3,
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_095",
+      "name": "Reiss",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/reiss.png",
+      "totalFeaturePoints": 40,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          4,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          5,
+          3
+        ],
+        [
+          3,
+          3,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_094",
+      "name": "Gabi",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/gabi.png",
+      "totalFeaturePoints": 41,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          5,
+          2,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          7,
+          5,
+          0
+        ],
+        [
+          4,
+          3,
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_007",
+      "name": "Eren",
+      "series": "Attack on Titan",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/eren.png",
+      "totalFeaturePoints": 42,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          3,
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          4,
+          0
+        ],
+        [
+          4,
+          5,
+          6,
+          3
+        ],
+        [
+          1,
+          4,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_062",
+      "name": "Echo",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/echo.png",
+      "totalFeaturePoints": 42,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          5,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          4,
+          1
+        ],
+        [
+          6,
+          6,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_041",
+      "name": "Porygon",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/porygon.png",
+      "totalFeaturePoints": 43,
+      "matchingPoints": 9,
+      "occupiedCells": 12,
+      "totalCells": 16,
+      "coveragePct": 75.0,
+      "gridDistribution": [
+        [
+          4,
+          3,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          3,
+          5,
+          1
+        ],
+        [
+          4,
+          3,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_067",
+      "name": "Swamp Fire",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/swamp-fire.png",
+      "totalFeaturePoints": 44,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          2,
+          0
+        ],
+        [
+          1,
+          4,
+          5,
+          2
+        ],
+        [
+          2,
+          4,
+          5,
+          3
+        ],
+        [
+          4,
+          3,
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_008",
+      "name": "Hornet",
+      "series": "Hollow Knight",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/hornet.png",
+      "totalFeaturePoints": 45,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          2,
+          5,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_018",
+      "name": "Whis",
+      "series": "Dragon Ball",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/whis.png",
+      "totalFeaturePoints": 45,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          1,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          6,
+          4,
+          2
+        ],
+        [
+          4,
+          4,
+          6,
+          4
+        ],
+        [
+          0,
+          4,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_028",
+      "name": "Diamondhead",
+      "series": "Ben 10",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/diamondhead.png",
+      "totalFeaturePoints": 45,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          6,
+          2
+        ],
+        [
+          1,
+          5,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_031",
+      "name": "Snorlax",
+      "series": "Pokemon",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/snorlax.png",
+      "totalFeaturePoints": 46,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          5,
+          7,
+          3,
+          6
+        ],
+        [
+          6,
+          1,
+          4,
+          4
+        ],
+        [
+          3,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0,
+          3
+        ]
+      ]
+    }
+  ],
+  "poorCoverage": [
+    {
+      "cardId": "char_060",
+      "name": "Way Big",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/way-big.png",
+      "totalFeaturePoints": 26,
+      "matchingPoints": 9,
+      "occupiedCells": 10,
+      "totalCells": 16,
+      "coveragePct": 62.5,
+      "gridDistribution": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          8,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_048",
+      "name": "Gyutaro",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/gyutaro.png",
+      "totalFeaturePoints": 33,
+      "matchingPoints": 9,
+      "occupiedCells": 10,
+      "totalCells": 16,
+      "coveragePct": 62.5,
+      "gridDistribution": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          2,
+          1
+        ],
+        [
+          2,
+          6,
+          1,
+          0
+        ],
+        [
+          0,
+          7,
+          6,
+          2
+        ]
+      ]
+    }
+  ],
+  "allTargets": [
+    {
+      "cardId": "char_060",
+      "name": "Way Big",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/way-big.png",
+      "totalFeaturePoints": 26,
+      "matchingPoints": 9,
+      "occupiedCells": 10,
+      "totalCells": 16,
+      "coveragePct": 62.5,
+      "gridDistribution": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          8,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_048",
+      "name": "Gyutaro",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/gyutaro.png",
+      "totalFeaturePoints": 33,
+      "matchingPoints": 9,
+      "occupiedCells": 10,
+      "totalCells": 16,
+      "coveragePct": 62.5,
+      "gridDistribution": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          2,
+          1
+        ],
+        [
+          2,
+          6,
+          1,
+          0
+        ],
+        [
+          0,
+          7,
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_003",
+      "name": "Muzan",
+      "series": "Demon Slayer",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/muzan.png",
+      "totalFeaturePoints": 35,
+      "matchingPoints": 9,
+      "occupiedCells": 12,
+      "totalCells": 16,
+      "coveragePct": 75.0,
+      "gridDistribution": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          4,
+          6,
+          2
+        ],
+        [
+          0,
+          4,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_026",
+      "name": "XLR8",
+      "series": "Ben 10",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/xlr8.png",
+      "totalFeaturePoints": 36,
+      "matchingPoints": 9,
+      "occupiedCells": 12,
+      "totalCells": 16,
+      "coveragePct": 75.0,
+      "gridDistribution": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          5,
+          4
+        ],
+        [
+          5,
+          4,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_055",
+      "name": "Squirtle",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/squirtle.png",
+      "totalFeaturePoints": 40,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          1,
+          0,
+          2
+        ],
+        [
+          5,
+          3,
+          5,
+          2
+        ],
+        [
+          6,
+          3,
+          4,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_095",
+      "name": "Reiss",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/reiss.png",
+      "totalFeaturePoints": 40,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          0,
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          4,
+          3,
+          3
+        ],
+        [
+          3,
+          4,
+          5,
+          3
+        ],
+        [
+          3,
+          3,
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_094",
+      "name": "Gabi",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/gabi.png",
+      "totalFeaturePoints": 41,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          5,
+          2,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          7,
+          5,
+          0
+        ],
+        [
+          4,
+          3,
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_007",
+      "name": "Eren",
+      "series": "Attack on Titan",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/eren.png",
+      "totalFeaturePoints": 42,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          3,
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          4,
+          0
+        ],
+        [
+          4,
+          5,
+          6,
+          3
+        ],
+        [
+          1,
+          4,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_062",
+      "name": "Echo",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/echo.png",
+      "totalFeaturePoints": 42,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          1,
+          2,
+          0,
+          0
+        ],
+        [
+          5,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          4,
+          1
+        ],
+        [
+          6,
+          6,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_041",
+      "name": "Porygon",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/porygon.png",
+      "totalFeaturePoints": 43,
+      "matchingPoints": 9,
+      "occupiedCells": 12,
+      "totalCells": 16,
+      "coveragePct": 75.0,
+      "gridDistribution": [
+        [
+          4,
+          3,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          3,
+          5,
+          1
+        ],
+        [
+          4,
+          3,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_067",
+      "name": "Swamp Fire",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/swamp-fire.png",
+      "totalFeaturePoints": 44,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          2,
+          0
+        ],
+        [
+          1,
+          4,
+          5,
+          2
+        ],
+        [
+          2,
+          4,
+          5,
+          3
+        ],
+        [
+          4,
+          3,
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_008",
+      "name": "Hornet",
+      "series": "Hollow Knight",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/hornet.png",
+      "totalFeaturePoints": 45,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          2,
+          5,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          6,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_018",
+      "name": "Whis",
+      "series": "Dragon Ball",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/whis.png",
+      "totalFeaturePoints": 45,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          1,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          6,
+          4,
+          2
+        ],
+        [
+          4,
+          4,
+          6,
+          4
+        ],
+        [
+          0,
+          4,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_028",
+      "name": "Diamondhead",
+      "series": "Ben 10",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/diamondhead.png",
+      "totalFeaturePoints": 45,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          6,
+          2
+        ],
+        [
+          1,
+          5,
+          2,
+          3
+        ],
+        [
+          0,
+          5,
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_031",
+      "name": "Snorlax",
+      "series": "Pokemon",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/snorlax.png",
+      "totalFeaturePoints": 46,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          5,
+          7,
+          3,
+          6
+        ],
+        [
+          6,
+          1,
+          4,
+          4
+        ],
+        [
+          3,
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_068",
+      "name": "Humungousaur",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/humungousaur.png",
+      "totalFeaturePoints": 46,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          5,
+          7,
+          3
+        ],
+        [
+          5,
+          3,
+          2,
+          5
+        ],
+        [
+          3,
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_002",
+      "name": "Alien X",
+      "series": "Ben 10",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/alien-x.png",
+      "totalFeaturePoints": 47,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          2,
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          2,
+          4
+        ],
+        [
+          4,
+          5,
+          3,
+          4
+        ],
+        [
+          3,
+          6,
+          5,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_080",
+      "name": "Hanami",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/hanami.png",
+      "totalFeaturePoints": 47,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          3,
+          5,
+          4,
+          2
+        ],
+        [
+          3,
+          4,
+          6,
+          1
+        ],
+        [
+          1,
+          5,
+          5,
+          1
+        ],
+        [
+          2,
+          2,
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "cardId": "char_027",
+      "name": "Armin",
+      "series": "Attack on Titan",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/armin.png",
+      "totalFeaturePoints": 48,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          4,
+          5,
+          5
+        ],
+        [
+          4,
+          4,
+          2,
+          5
+        ],
+        [
+          2,
+          4,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_056",
+      "name": "Eevee",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/eevee.png",
+      "totalFeaturePoints": 48,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          6,
+          4,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          3,
+          7,
+          6,
+          3
+        ],
+        [
+          5,
+          3,
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_057",
+      "name": "Magikarp",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/magikarp.png",
+      "totalFeaturePoints": 48,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          2,
+          1,
+          3,
+          0
+        ],
+        [
+          3,
+          4,
+          5,
+          2
+        ],
+        [
+          5,
+          4,
+          3,
+          2
+        ],
+        [
+          5,
+          2,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_059",
+      "name": "Upgrade",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/upgrade.png",
+      "totalFeaturePoints": 48,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          2,
+          5,
+          6,
+          1
+        ],
+        [
+          6,
+          4,
+          1,
+          0
+        ],
+        [
+          1,
+          5,
+          3,
+          1
+        ],
+        [
+          0,
+          2,
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "cardId": "char_065",
+      "name": "Meowth",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/meowth.png",
+      "totalFeaturePoints": 48,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          0,
+          2,
+          3,
+          0
+        ],
+        [
+          4,
+          5,
+          5,
+          3
+        ],
+        [
+          0,
+          5,
+          2,
+          6
+        ],
+        [
+          3,
+          4,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_021",
+      "name": "Frieza",
+      "series": "Dragon Ball",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/frieza.png",
+      "totalFeaturePoints": 49,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          5,
+          3,
+          5,
+          3
+        ],
+        [
+          1,
+          6,
+          6,
+          4
+        ],
+        [
+          3,
+          1,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_039",
+      "name": "Bulbasaur",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/bulbasaur.png",
+      "totalFeaturePoints": 49,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          4,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          4,
+          2
+        ],
+        [
+          2,
+          5,
+          2,
+          2
+        ],
+        [
+          6,
+          6,
+          6,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_074",
+      "name": "Piccolo",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/piccolo.png",
+      "totalFeaturePoints": 49,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          0,
+          1,
+          4,
+          7
+        ],
+        [
+          1,
+          1,
+          5,
+          6
+        ],
+        [
+          3,
+          3,
+          3,
+          4
+        ],
+        [
+          5,
+          2,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_087",
+      "name": "Bulma",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/bulma.png",
+      "totalFeaturePoints": 49,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          1,
+          4,
+          4,
+          0
+        ],
+        [
+          2,
+          5,
+          7,
+          0
+        ],
+        [
+          3,
+          5,
+          4,
+          0
+        ],
+        [
+          3,
+          5,
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_036",
+      "name": "Falco",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/falco.png",
+      "totalFeaturePoints": 50,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          5,
+          4,
+          6,
+          2
+        ],
+        [
+          3,
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          6,
+          4,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          0
+        ]
+      ]
+    },
+    {
+      "cardId": "char_089",
+      "name": "Toge",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/toge.png",
+      "totalFeaturePoints": 50,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          6,
+          6,
+          2,
+          7
+        ],
+        [
+          1,
+          1,
+          3,
+          1
+        ],
+        [
+          6,
+          6,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          4,
+          0
+        ]
+      ]
+    },
+    {
+      "cardId": "char_090",
+      "name": "Maki",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/maki.png",
+      "totalFeaturePoints": 50,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          2,
+          4,
+          4,
+          3
+        ],
+        [
+          1,
+          5,
+          5,
+          1
+        ],
+        [
+          0,
+          6,
+          5,
+          1
+        ],
+        [
+          3,
+          4,
+          1,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_050",
+      "name": "Cell",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/cell.png",
+      "totalFeaturePoints": 51,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          3,
+          3,
+          3,
+          5
+        ],
+        [
+          2,
+          4,
+          4,
+          4
+        ],
+        [
+          4,
+          4,
+          0,
+          4
+        ],
+        [
+          4,
+          5,
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_082",
+      "name": "Daki",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/daki.png",
+      "totalFeaturePoints": 51,
+      "matchingPoints": 9,
+      "occupiedCells": 12,
+      "totalCells": 16,
+      "coveragePct": 75.0,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          1
+        ],
+        [
+          5,
+          6,
+          3,
+          6
+        ],
+        [
+          7,
+          1,
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "cardId": "char_088",
+      "name": "Panda",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/panda.png",
+      "totalFeaturePoints": 51,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          5,
+          5,
+          5,
+          2
+        ],
+        [
+          2,
+          4,
+          4,
+          3
+        ],
+        [
+          5,
+          3,
+          1,
+          3
+        ],
+        [
+          4,
+          1,
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_096",
+      "name": "Pieck",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/pieck.png",
+      "totalFeaturePoints": 51,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          3,
+          3,
+          2
+        ],
+        [
+          1,
+          1,
+          6,
+          4
+        ],
+        [
+          2,
+          2,
+          4,
+          3
+        ],
+        [
+          3,
+          4,
+          5,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_097",
+      "name": "Sasha",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/sasha.png",
+      "totalFeaturePoints": 51,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          4,
+          6,
+          2,
+          2
+        ],
+        [
+          2,
+          6,
+          4,
+          0
+        ],
+        [
+          3,
+          6,
+          3,
+          0
+        ],
+        [
+          1,
+          6,
+          6,
+          0
+        ]
+      ]
+    },
+    {
+      "cardId": "char_072",
+      "name": "Doma",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/doma.png",
+      "totalFeaturePoints": 52,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          8,
+          2,
+          4
+        ],
+        [
+          2,
+          5,
+          4,
+          2
+        ],
+        [
+          2,
+          5,
+          4,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_093",
+      "name": "Annie",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/annie.png",
+      "totalFeaturePoints": 52,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          6,
+          1,
+          5,
+          3
+        ],
+        [
+          1,
+          4,
+          4,
+          3
+        ],
+        [
+          2,
+          3,
+          5,
+          3
+        ],
+        [
+          4,
+          2,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_006",
+      "name": "Satoru Gojo",
+      "series": "Jujutsu Kaisen",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/satoru-gojo.png",
+      "totalFeaturePoints": 53,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          1,
+          5,
+          5,
+          0
+        ],
+        [
+          2,
+          4,
+          4,
+          1
+        ],
+        [
+          2,
+          4,
+          6,
+          0
+        ],
+        [
+          3,
+          3,
+          7,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_037",
+      "name": "Machamp",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/machamp.png",
+      "totalFeaturePoints": 54,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          2,
+          0,
+          4,
+          5
+        ],
+        [
+          3,
+          3,
+          5,
+          3
+        ],
+        [
+          3,
+          6,
+          6,
+          5
+        ],
+        [
+          2,
+          5,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_038",
+      "name": "Alakazam",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/alakazam.png",
+      "totalFeaturePoints": 54,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          7,
+          4,
+          2,
+          2
+        ],
+        [
+          3,
+          7,
+          6,
+          4
+        ],
+        [
+          1,
+          6,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_070",
+      "name": "Uzui",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/uzui.png",
+      "totalFeaturePoints": 54,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          4,
+          3,
+          4,
+          0
+        ],
+        [
+          6,
+          5,
+          4,
+          1
+        ],
+        [
+          4,
+          4,
+          6,
+          1
+        ],
+        [
+          4,
+          2,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_085",
+      "name": "Krillin",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/krillin.png",
+      "totalFeaturePoints": 54,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          2,
+          0,
+          2,
+          5
+        ],
+        [
+          1,
+          1,
+          2,
+          3
+        ],
+        [
+          7,
+          4,
+          5,
+          5
+        ],
+        [
+          2,
+          5,
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_092",
+      "name": "Zeke",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/zeke.png",
+      "totalFeaturePoints": 54,
+      "matchingPoints": 9,
+      "occupiedCells": 13,
+      "totalCells": 16,
+      "coveragePct": 81.2,
+      "gridDistribution": [
+        [
+          0,
+          0,
+          6,
+          4
+        ],
+        [
+          0,
+          3,
+          3,
+          5
+        ],
+        [
+          3,
+          7,
+          3,
+          6
+        ],
+        [
+          2,
+          5,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_034",
+      "name": "Nobara",
+      "series": "Jujutsu Kaisen",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/nobara.png",
+      "totalFeaturePoints": 56,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          5,
+          0,
+          3,
+          3
+        ],
+        [
+          2,
+          4,
+          4,
+          1
+        ],
+        [
+          4,
+          3,
+          7,
+          0
+        ],
+        [
+          2,
+          5,
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "cardId": "char_001",
+      "name": "Mewtwo",
+      "series": "Pokemon",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/mewtwo.png",
+      "totalFeaturePoints": 57,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          5,
+          7,
+          3
+        ],
+        [
+          5,
+          5,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          4,
+          2
+        ],
+        [
+          4,
+          3,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_017",
+      "name": "Rengoku",
+      "series": "Demon Slayer",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/rengoku.png",
+      "totalFeaturePoints": 57,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          0,
+          6,
+          4,
+          2
+        ],
+        [
+          3,
+          3,
+          3,
+          6
+        ],
+        [
+          1,
+          6,
+          5,
+          2
+        ],
+        [
+          3,
+          4,
+          6,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_030",
+      "name": "Heatblast",
+      "series": "Ben 10",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/heatblast.png",
+      "totalFeaturePoints": 57,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          3,
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          3,
+          3
+        ],
+        [
+          0,
+          7,
+          7,
+          5
+        ],
+        [
+          2,
+          4,
+          6,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_077",
+      "name": "Shenron",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/shenron.png",
+      "totalFeaturePoints": 57,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          4,
+          0,
+          1,
+          6
+        ],
+        [
+          2,
+          2,
+          2,
+          6
+        ],
+        [
+          7,
+          4,
+          6,
+          4
+        ],
+        [
+          6,
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_014",
+      "name": "Reiner",
+      "series": "Attack on Titan",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/reiner.png",
+      "totalFeaturePoints": 58,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          0,
+          2,
+          6,
+          4
+        ],
+        [
+          5,
+          5,
+          5,
+          3
+        ],
+        [
+          5,
+          2,
+          7,
+          1
+        ],
+        [
+          1,
+          2,
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_015",
+      "name": "Itadori",
+      "series": "Jujutsu Kaisen",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/itadori.png",
+      "totalFeaturePoints": 58,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          3,
+          9,
+          4,
+          4
+        ],
+        [
+          1,
+          9,
+          4,
+          3
+        ],
+        [
+          2,
+          6,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_081",
+      "name": "Choso",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/choso.png",
+      "totalFeaturePoints": 58,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          4,
+          3,
+          3
+        ],
+        [
+          3,
+          3,
+          2,
+          5
+        ],
+        [
+          8,
+          4,
+          6,
+          4
+        ],
+        [
+          2,
+          4,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_011",
+      "name": "Erwin",
+      "series": "Attack on Titan",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/erwin.png",
+      "totalFeaturePoints": 59,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          3,
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          5,
+          6,
+          4
+        ],
+        [
+          2,
+          4,
+          3,
+          5
+        ],
+        [
+          1,
+          8,
+          7,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_058",
+      "name": "Grey Matter",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/grey-matter.png",
+      "totalFeaturePoints": 59,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          3,
+          1,
+          1
+        ],
+        [
+          2,
+          6,
+          5,
+          1
+        ],
+        [
+          5,
+          7,
+          4,
+          5
+        ],
+        [
+          3,
+          5,
+          5,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_078",
+      "name": "Nanami",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/nanami.png",
+      "totalFeaturePoints": 59,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          3,
+          4,
+          2,
+          6
+        ],
+        [
+          1,
+          1,
+          4,
+          6
+        ],
+        [
+          0,
+          2,
+          8,
+          6
+        ],
+        [
+          2,
+          4,
+          7,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_064",
+      "name": "Jigglypuff",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/jigglypuff.png",
+      "totalFeaturePoints": 60,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          5,
+          5,
+          2,
+          3
+        ],
+        [
+          4,
+          1,
+          1,
+          7
+        ],
+        [
+          3,
+          2,
+          4,
+          5
+        ],
+        [
+          6,
+          2,
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_071",
+      "name": "Akaza",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/akaza.png",
+      "totalFeaturePoints": 60,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          6,
+          7,
+          5,
+          1
+        ],
+        [
+          5,
+          3,
+          3,
+          4
+        ],
+        [
+          5,
+          4,
+          4,
+          1
+        ],
+        [
+          6,
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_099",
+      "name": "Connie",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/connie.png",
+      "totalFeaturePoints": 60,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          4,
+          1,
+          4,
+          0
+        ],
+        [
+          3,
+          5,
+          9,
+          3
+        ],
+        [
+          2,
+          4,
+          6,
+          3
+        ],
+        [
+          2,
+          6,
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_025",
+      "name": "Four Arms",
+      "series": "Ben 10",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/four-arms.png",
+      "totalFeaturePoints": 61,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          1,
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          5,
+          6,
+          3
+        ],
+        [
+          5,
+          4,
+          8,
+          6
+        ],
+        [
+          3,
+          6,
+          2,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_053",
+      "name": "Geto",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/geto.png",
+      "totalFeaturePoints": 61,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          1,
+          3,
+          1
+        ],
+        [
+          4,
+          4,
+          3,
+          5
+        ],
+        [
+          5,
+          5,
+          6,
+          5
+        ],
+        [
+          3,
+          5,
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_024",
+      "name": "Mikasa",
+      "series": "Attack on Titan",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/mikasa.png",
+      "totalFeaturePoints": 62,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          2,
+          3,
+          7,
+          2
+        ],
+        [
+          1,
+          3,
+          8,
+          5
+        ],
+        [
+          1,
+          1,
+          6,
+          4
+        ],
+        [
+          3,
+          6,
+          7,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_047",
+      "name": "Inosuke",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/inosuke.png",
+      "totalFeaturePoints": 62,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          4,
+          7,
+          5,
+          2
+        ],
+        [
+          4,
+          2,
+          5,
+          0
+        ],
+        [
+          8,
+          7,
+          2,
+          5
+        ],
+        [
+          2,
+          5,
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_049",
+      "name": "Android 18",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/android-18.png",
+      "totalFeaturePoints": 62,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          1,
+          6,
+          3,
+          0
+        ],
+        [
+          2,
+          4,
+          7,
+          5
+        ],
+        [
+          1,
+          6,
+          2,
+          7
+        ],
+        [
+          2,
+          6,
+          4,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_061",
+      "name": "Cannonbolt",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/cannonbolt.png",
+      "totalFeaturePoints": 62,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          3,
+          8,
+          2,
+          5
+        ],
+        [
+          0,
+          5,
+          4,
+          3
+        ],
+        [
+          3,
+          2,
+          5,
+          4
+        ],
+        [
+          3,
+          2,
+          7,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_079",
+      "name": "Jogo",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/jogo.png",
+      "totalFeaturePoints": 62,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          2,
+          2,
+          6,
+          0
+        ],
+        [
+          4,
+          8,
+          7,
+          5
+        ],
+        [
+          5,
+          7,
+          6,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_012",
+      "name": "Broly",
+      "series": "Dragon Ball",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/broly.png",
+      "totalFeaturePoints": 63,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          4,
+          6,
+          8
+        ],
+        [
+          1,
+          2,
+          6,
+          5
+        ],
+        [
+          3,
+          6,
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "cardId": "char_043",
+      "name": "Stinkfly",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/stinkfly.png",
+      "totalFeaturePoints": 63,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          5,
+          4,
+          5,
+          1
+        ],
+        [
+          4,
+          5,
+          6,
+          4
+        ],
+        [
+          4,
+          4,
+          3,
+          5
+        ],
+        [
+          4,
+          2,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_013",
+      "name": "Charizard",
+      "series": "Pokemon",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/charizard.png",
+      "totalFeaturePoints": 64,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          2,
+          4,
+          5,
+          5
+        ],
+        [
+          0,
+          4,
+          4,
+          5
+        ],
+        [
+          5,
+          3,
+          5,
+          6
+        ],
+        [
+          5,
+          4,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_019",
+      "name": "Yuta",
+      "series": "Jujutsu Kaisen",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/yuta.png",
+      "totalFeaturePoints": 64,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          3,
+          2,
+          2
+        ],
+        [
+          7,
+          4,
+          5,
+          3
+        ],
+        [
+          5,
+          6,
+          3,
+          5
+        ],
+        [
+          5,
+          4,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "cardId": "char_091",
+      "name": "Hange",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/hange.png",
+      "totalFeaturePoints": 64,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          0,
+          2,
+          4,
+          2
+        ],
+        [
+          3,
+          5,
+          6,
+          3
+        ],
+        [
+          4,
+          9,
+          1,
+          0
+        ],
+        [
+          7,
+          5,
+          8,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_010",
+      "name": "Sukuna",
+      "series": "Jujutsu Kaisen",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/sukuna.png",
+      "totalFeaturePoints": 65,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          4,
+          2,
+          3
+        ],
+        [
+          1,
+          5,
+          5,
+          2
+        ],
+        [
+          5,
+          3,
+          5,
+          3
+        ],
+        [
+          6,
+          8,
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_029",
+      "name": "Megumi",
+      "series": "Jujutsu Kaisen",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/megumi.png",
+      "totalFeaturePoints": 65,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          2,
+          4,
+          1
+        ],
+        [
+          4,
+          3,
+          5,
+          4
+        ],
+        [
+          3,
+          8,
+          3,
+          3
+        ],
+        [
+          4,
+          4,
+          7,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_042",
+      "name": "Ditto",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/ditto.png",
+      "totalFeaturePoints": 65,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          4,
+          5,
+          4
+        ],
+        [
+          7,
+          3,
+          4,
+          5
+        ],
+        [
+          4,
+          4,
+          4,
+          2
+        ],
+        [
+          3,
+          4,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_073",
+      "name": "Haganezuka",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/haganezuka.png",
+      "totalFeaturePoints": 65,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          2,
+          8,
+          3,
+          3
+        ],
+        [
+          9,
+          2,
+          7,
+          7
+        ],
+        [
+          2,
+          4,
+          2,
+          7
+        ],
+        [
+          3,
+          2,
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "cardId": "char_084",
+      "name": "Genya",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/genya.png",
+      "totalFeaturePoints": 65,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          6,
+          2,
+          4,
+          3
+        ],
+        [
+          1,
+          4,
+          8,
+          5
+        ],
+        [
+          4,
+          5,
+          2,
+          2
+        ],
+        [
+          3,
+          6,
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_045",
+      "name": "Wildmutt",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/wildmutt.png",
+      "totalFeaturePoints": 66,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          3,
+          6,
+          2
+        ],
+        [
+          7,
+          4,
+          5,
+          6
+        ],
+        [
+          3,
+          6,
+          2,
+          2
+        ],
+        [
+          5,
+          3,
+          5,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_052",
+      "name": "Todo",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/todo.png",
+      "totalFeaturePoints": 66,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          1,
+          2,
+          2
+        ],
+        [
+          4,
+          5,
+          6,
+          4
+        ],
+        [
+          3,
+          5,
+          7,
+          3
+        ],
+        [
+          3,
+          5,
+          7,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_033",
+      "name": "Pikachu",
+      "series": "Pokemon",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/pikachu.png",
+      "totalFeaturePoints": 67,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          3,
+          5,
+          3,
+          5
+        ],
+        [
+          4,
+          4,
+          6,
+          3
+        ],
+        [
+          7,
+          5,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          6,
+          0
+        ]
+      ]
+    },
+    {
+      "cardId": "char_032",
+      "name": "Tanjiro",
+      "series": "Demon Slayer",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/tanjiro.png",
+      "totalFeaturePoints": 68,
+      "matchingPoints": 9,
+      "occupiedCells": 14,
+      "totalCells": 16,
+      "coveragePct": 87.5,
+      "gridDistribution": [
+        [
+          3,
+          3,
+          6,
+          0
+        ],
+        [
+          5,
+          5,
+          4,
+          5
+        ],
+        [
+          8,
+          4,
+          5,
+          5
+        ],
+        [
+          0,
+          4,
+          4,
+          7
+        ]
+      ]
+    },
+    {
+      "cardId": "char_086",
+      "name": "Roshi",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/roshi.png",
+      "totalFeaturePoints": 68,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          1,
+          3,
+          3
+        ],
+        [
+          4,
+          9,
+          6,
+          3
+        ],
+        [
+          5,
+          6,
+          6,
+          2
+        ],
+        [
+          5,
+          5,
+          3,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_098",
+      "name": "Jean",
+      "series": "Attack on Titan",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/jean.png",
+      "totalFeaturePoints": 68,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          1,
+          2,
+          3
+        ],
+        [
+          5,
+          6,
+          6,
+          1
+        ],
+        [
+          4,
+          5,
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          8,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_016",
+      "name": "Gohan",
+      "series": "Dragon Ball",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/gohan.png",
+      "totalFeaturePoints": 69,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          4,
+          2,
+          3
+        ],
+        [
+          2,
+          4,
+          7,
+          5
+        ],
+        [
+          2,
+          4,
+          7,
+          6
+        ],
+        [
+          4,
+          3,
+          6,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_069",
+      "name": "Ripjaws",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/ripjaws.png",
+      "totalFeaturePoints": 69,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          6,
+          5,
+          6,
+          5
+        ],
+        [
+          5,
+          1,
+          4,
+          4
+        ],
+        [
+          5,
+          4,
+          5,
+          2
+        ],
+        [
+          5,
+          3,
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_023",
+      "name": "Vegeta",
+      "series": "Dragon Ball",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/vegeta.png",
+      "totalFeaturePoints": 70,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          2,
+          7,
+          3
+        ],
+        [
+          5,
+          6,
+          4,
+          4
+        ],
+        [
+          4,
+          5,
+          3,
+          5
+        ],
+        [
+          3,
+          5,
+          5,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_035",
+      "name": "Nezuko",
+      "series": "Demon Slayer",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/nezuko.png",
+      "totalFeaturePoints": 70,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          5,
+          2,
+          2,
+          5
+        ],
+        [
+          3,
+          4,
+          4,
+          5
+        ],
+        [
+          5,
+          6,
+          4,
+          4
+        ],
+        [
+          3,
+          7,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_044",
+      "name": "Ghostfreak",
+      "series": "Ben 10",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/ghostfreak.png",
+      "totalFeaturePoints": 70,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          5,
+          6,
+          3,
+          0
+        ],
+        [
+          7,
+          5,
+          6,
+          3
+        ],
+        [
+          3,
+          3,
+          7,
+          6
+        ],
+        [
+          2,
+          3,
+          7,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_063",
+      "name": "Shinobu",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/shinobu.png",
+      "totalFeaturePoints": 72,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          6,
+          2,
+          6
+        ],
+        [
+          4,
+          7,
+          5,
+          6
+        ],
+        [
+          5,
+          3,
+          5,
+          4
+        ],
+        [
+          1,
+          4,
+          6,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_083",
+      "name": "Kanao",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/kanao.png",
+      "totalFeaturePoints": 73,
+      "matchingPoints": 9,
+      "occupiedCells": 15,
+      "totalCells": 16,
+      "coveragePct": 93.8,
+      "gridDistribution": [
+        [
+          1,
+          6,
+          5,
+          6
+        ],
+        [
+          4,
+          6,
+          6,
+          0
+        ],
+        [
+          6,
+          4,
+          5,
+          3
+        ],
+        [
+          6,
+          5,
+          4,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_005",
+      "name": "Goku",
+      "series": "Dragon Ball",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/goku.png",
+      "totalFeaturePoints": 74,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          7,
+          6,
+          2
+        ],
+        [
+          4,
+          6,
+          3,
+          6
+        ],
+        [
+          2,
+          7,
+          5,
+          1
+        ],
+        [
+          5,
+          5,
+          6,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_020",
+      "name": "Giyu",
+      "series": "Demon Slayer",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/giyu.png",
+      "totalFeaturePoints": 74,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          5,
+          3,
+          1,
+          4
+        ],
+        [
+          3,
+          3,
+          4,
+          5
+        ],
+        [
+          7,
+          9,
+          7,
+          4
+        ],
+        [
+          7,
+          3,
+          6,
+          3
+        ]
+      ]
+    },
+    {
+      "cardId": "char_066",
+      "name": "Psyduck",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/psyduck.png",
+      "totalFeaturePoints": 74,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          5,
+          4,
+          4,
+          6
+        ],
+        [
+          6,
+          5,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          5,
+          5
+        ],
+        [
+          4,
+          7,
+          6,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_009",
+      "name": "Madara",
+      "series": "Naruto",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/madara.png",
+      "totalFeaturePoints": 75,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          8,
+          3,
+          9,
+          2
+        ],
+        [
+          1,
+          6,
+          3,
+          4
+        ],
+        [
+          5,
+          3,
+          4,
+          5
+        ],
+        [
+          5,
+          6,
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_040",
+      "name": "Geodude",
+      "series": "Pokemon",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/geodude.png",
+      "totalFeaturePoints": 75,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          2,
+          7,
+          3,
+          2
+        ],
+        [
+          4,
+          8,
+          6,
+          5
+        ],
+        [
+          4,
+          3,
+          7,
+          6
+        ],
+        [
+          6,
+          6,
+          1,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_046",
+      "name": "Zenitsu",
+      "series": "Demon Slayer",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/zenitsu.png",
+      "totalFeaturePoints": 75,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          1,
+          6,
+          6
+        ],
+        [
+          2,
+          1,
+          6,
+          5
+        ],
+        [
+          5,
+          9,
+          5,
+          4
+        ],
+        [
+          7,
+          5,
+          6,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_022",
+      "name": "Gengar",
+      "series": "Pokemon",
+      "tier": "Rare",
+      "image": "/client/public/cards-compile/gengar.png",
+      "totalFeaturePoints": 76,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          7,
+          2,
+          2,
+          5
+        ],
+        [
+          5,
+          4,
+          6,
+          2
+        ],
+        [
+          5,
+          4,
+          6,
+          6
+        ]
+      ]
+    },
+    {
+      "cardId": "char_004",
+      "name": "Beerus",
+      "series": "Dragon Ball",
+      "tier": "Legendary",
+      "image": "/client/public/cards-compile/beerus.png",
+      "totalFeaturePoints": 77,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          4,
+          3,
+          4,
+          6
+        ],
+        [
+          5,
+          6,
+          5,
+          3
+        ],
+        [
+          4,
+          6,
+          4,
+          6
+        ],
+        [
+          5,
+          8,
+          4,
+          4
+        ]
+      ]
+    },
+    {
+      "cardId": "char_076",
+      "name": "Satan",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/satan.png",
+      "totalFeaturePoints": 78,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          5,
+          4,
+          5
+        ],
+        [
+          4,
+          4,
+          5,
+          3
+        ],
+        [
+          5,
+          5,
+          6,
+          5
+        ],
+        [
+          6,
+          6,
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "cardId": "char_075",
+      "name": "Trunks",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/trunks.png",
+      "totalFeaturePoints": 82,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          5,
+          8,
+          5,
+          4
+        ],
+        [
+          4,
+          7,
+          8,
+          6
+        ],
+        [
+          7,
+          3,
+          3,
+          6
+        ],
+        [
+          1,
+          4,
+          6,
+          5
+        ]
+      ]
+    },
+    {
+      "cardId": "char_051",
+      "name": "Majin Buu",
+      "series": "Dragon Ball",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/majin-buu.png",
+      "totalFeaturePoints": 85,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          6,
+          5,
+          3,
+          7
+        ],
+        [
+          4,
+          4,
+          3,
+          7
+        ],
+        [
+          3,
+          8,
+          5,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          7
+        ]
+      ]
+    },
+    {
+      "cardId": "char_054",
+      "name": "Mahito",
+      "series": "Jujutsu Kaisen",
+      "tier": "Common",
+      "image": "/client/public/cards-compile/mahito.png",
+      "totalFeaturePoints": 85,
+      "matchingPoints": 9,
+      "occupiedCells": 16,
+      "totalCells": 16,
+      "coveragePct": 100.0,
+      "gridDistribution": [
+        [
+          3,
+          5,
+          3,
+          4
+        ],
+        [
+          4,
+          8,
+          7,
+          6
+        ],
+        [
+          3,
+          6,
+          8,
+          6
+        ],
+        [
+          5,
+          6,
+          6,
+          5
+        ]
+      ]
+    }
+  ]
+}
