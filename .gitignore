@@ -71,5 +71,7 @@ scripts/test_*.py
 scripts/run_*.py
 scripts/extract_worker.py
 scripts/patch_worker.py
-
+scripts/detection/raw_extracted_cards/
+scripts/detection/crops_test/*.png
+!scripts/detection/crops_test/exact_logo_mask.png
 
