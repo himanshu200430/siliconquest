@@ -1,13 +1,8 @@
 "use client";
 
 import { useState, useEffect, FormEvent } from "react";
-import {
-  checkCounters,
-  initializeFirestoreCounters,
-} from "@/lib/firestoreSetup";
 import { useAdminData, useResetDatabase } from "./admin/hooks/useAdminData";
 import { LoginForm } from "./admin/LoginForm";
-import { SetupScreen } from "./admin/SetupScreen";
 import { ActionButtons } from "./admin/ActionButtons";
 import { TeamsManagement } from "./admin/TeamsManagement";
 import { CardsManagement } from "./admin/CardsManagement";
@@ -45,10 +40,6 @@ export default function AdminPortal({ onClose }: AdminPortalProps) {
   const [error, setError] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // Setup state
-  const [initializingCounters, setInitializingCounters] = useState(false);
-  const [setupRequired, setSetupRequired] = useState(false);
-
   // View state
   const [currentView, setCurrentView] = useState<"teams" | "cards">("teams");
 
@@ -84,24 +75,12 @@ export default function AdminPortal({ onClose }: AdminPortalProps) {
     handleUndoLastAction,
   } = useResetDatabase(fetchTeams, fetchCards);
 
-  // Check setup on mount
   useEffect(() => {
-    const checkSetup = async () => {
-      try {
-        const countersExist = await checkCounters();
-        setSetupRequired(!countersExist);
-      } catch (err) {
-        console.error("Error checking counters:", err);
-        setSetupRequired(true);
-      }
-    };
     if (isLoggedIn) {
-      checkSetup();
       fetchTeams();
       fetchCards();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoggedIn]); // Only run when isLoggedIn changes, not when fetch functions change
+  }, [isLoggedIn, fetchTeams, fetchCards]);
 
   const handleLogin = (e: FormEvent) => {
     e.preventDefault();
@@ -113,19 +92,6 @@ export default function AdminPortal({ onClose }: AdminPortalProps) {
       setError("");
     } else {
       setError("Invalid credentials");
-    }
-  };
-
-  const handleInitializeSetup = async () => {
-    setInitializingCounters(true);
-    try {
-      await initializeFirestoreCounters();
-      setSetupRequired(false);
-    } catch (err) {
-      console.error("Error initializing counters:", err);
-      setError("Failed to initialize counters. Please try again.");
-    } finally {
-      setInitializingCounters(false);
     }
   };
 
@@ -183,15 +149,7 @@ export default function AdminPortal({ onClose }: AdminPortalProps) {
             />
           ) : (
             <div className="text-gray-200">
-              {setupRequired ? (
-                <SetupScreen
-                  isInitializing={initializingCounters}
-                  error={error}
-                  onInitialize={handleInitializeSetup}
-                />
-              ) : (
-                <>
-                  <ActionButtons
+              <ActionButtons
                     currentView={currentView}
                     onViewChange={setCurrentView}
                     onResetClick={handleResetClick}
@@ -238,35 +196,29 @@ export default function AdminPortal({ onClose }: AdminPortalProps) {
 
                   {/* Team Form Modal */}
                   {isTeamFormOpen && (
-                    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-                      <TeamForm
-                        isOpen={isTeamFormOpen}
-                        onClose={() => {
-                          setIsTeamFormOpen(false);
-                          setTeamToEdit(null);
-                          fetchTeams();
-                        }}
-                        teamToEdit={teamToEdit || undefined}
-                      />
-                    </div>
+                    <TeamForm
+                      isOpen={isTeamFormOpen}
+                      onClose={() => {
+                        setIsTeamFormOpen(false);
+                        setTeamToEdit(null);
+                        fetchTeams();
+                      }}
+                      teamToEdit={teamToEdit || undefined}
+                    />
                   )}
 
                   {/* Card Form Modal */}
                   {isCardFormOpen && (
-                    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-                      <CardForm
-                        isOpen={isCardFormOpen}
-                        onClose={() => {
-                          setIsCardFormOpen(false);
-                          setCardToEdit(null);
-                          fetchCards();
-                        }}
-                        cardToEdit={cardToEdit || undefined}
-                      />
-                    </div>
+                    <CardForm
+                      isOpen={isCardFormOpen}
+                      onClose={() => {
+                        setIsCardFormOpen(false);
+                        setCardToEdit(null);
+                        fetchCards();
+                      }}
+                      cardToEdit={cardToEdit || undefined}
+                    />
                   )}
-                </>
-              )}
             </div>
           )}
         </div>

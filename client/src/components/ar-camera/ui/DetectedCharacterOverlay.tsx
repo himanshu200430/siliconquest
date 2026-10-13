@@ -50,7 +50,7 @@ export const DetectedCharacterOverlay = ({
   // Compact view for legendary characters (first 5 seconds) OR when manually minimized
   if ((isLegendary && !isExpanded) || isMinimized) {
     return (
-      <div className="absolute inset-0 flex items-center justify-center p-4 z-40">
+      <div className="absolute inset-0 flex items-center justify-center p-4 z-[55] pointer-events-auto">
         <div
           className={`relative bg-slate-900/60 backdrop-blur-md border-2 border-${themeColor.primary}/70 rounded-2xl px-8 py-4 shadow-2xl shadow-${themeColor.glow} animate-scaleIn transition-all duration-500`}
         >
@@ -100,7 +100,7 @@ export const DetectedCharacterOverlay = ({
 
   // Full view (for Common/Rare always, and Legendary after 5 seconds)
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-4 z-40">
+    <div className="absolute inset-0 flex items-center justify-center p-4 z-[55] pointer-events-auto">
       <div
         className={`relative bg-slate-900/30 backdrop-blur-md border-2 border-${
           themeColor.primary

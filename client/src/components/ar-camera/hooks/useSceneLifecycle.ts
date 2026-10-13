@@ -9,20 +9,23 @@ export const useSceneLifecycle = (
   onReady: () => void,
   onError: (message: string) => void,
   selectedTier?: Tier,
-  onCameraLive?: () => void
+  onCameraLive?: () => void,
+  retryTrigger?: number
 ) => {
   useEffect(() => {
-    if (!scriptsLoaded || typeof document === "undefined" || !selectedTier) return;
+    if (!scriptsLoaded || typeof document === "undefined") return;
 
     let isMounted = true;
     let cleanupListeners: (() => void) | null = null;
     let readyCheckInterval: NodeJS.Timeout | null = null;
     let startArTimeout: NodeJS.Timeout | null = null;
+    let isStarting = false;
+    let arStarted = false;
 
     const setupScene = () => {
-      const targetId = selectedTier ? `mindar-scene-${selectedTier}` : null;
       const sceneEl =
-        (targetId ? (document.getElementById(targetId) as MindARSceneElement | null) : null) ||
+        (document.getElementById("mindar-scene-all") as MindARSceneElement | null) ||
+        (selectedTier ? (document.getElementById(`mindar-scene-${selectedTier}`) as MindARSceneElement | null) : null) ||
         sceneRef.current ||
         (document.querySelector("a-scene") as MindARSceneElement | null);
 
@@ -50,14 +53,18 @@ export const useSceneLifecycle = (
         }
       };
 
-      let arStarted = false;
       let startAttempts = 0;
 
       const startAR = async () => {
-        if (arStarted || !isMounted) return;
+        // Atomic gate: prevent multiple concurrent start attempts
+        if (arStarted || isStarting || !isMounted) return;
+        isStarting = true;
 
         const tryStart = async () => {
-          if (arStarted || !isMounted) return;
+          if (!isMounted) {
+            isStarting = false;
+            return;
+          }
 
           const systems = (sceneEl as unknown as {
             systems?: Record<
@@ -68,13 +75,20 @@ export const useSceneLifecycle = (
           const arSystem = systems?.["mindar-image-system"];
 
           if (arSystem && typeof arSystem.start === "function") {
+            if (arSystem.video) {
+              // Video already spawned by MindAR system
+              arStarted = true;
+              isStarting = false;
+              return;
+            }
+
             arStarted = true;
+            isStarting = false;
             try {
-              if (!arSystem.video) {
-                await arSystem.start();
-              }
+              await arSystem.start();
             } catch (err: unknown) {
               console.error("MindAR start error:", err);
+              arStarted = false;
               const e = err as { message?: string };
               if (isMounted) {
                 onError(
@@ -83,10 +97,11 @@ export const useSceneLifecycle = (
                 );
               }
             }
-          } else if (startAttempts < 35) {
+          } else if (startAttempts < 50) {
             startAttempts++;
             startArTimeout = setTimeout(tryStart, 100);
           } else {
+            isStarting = false;
             console.warn("MindAR system not ready after retries");
           }
         };
@@ -110,6 +125,8 @@ export const useSceneLifecycle = (
 
       const handleArError = (event: Event) => {
         if (!isMounted) return;
+        isStarting = false;
+        arStarted = false;
         console.error("MindAR arError event:", event);
         const customEvent = event as CustomEvent<{ error?: unknown }>;
         const detailError =
@@ -178,10 +195,7 @@ export const useSceneLifecycle = (
         sceneEl.addEventListener("loaded", handleLoaded, { once: true });
       }
 
-      // Also trigger startAR immediately in case systems are already bound
-      startAR();
-
-      // Video monitoring: Detect when camera frames arrive and failsafe readiness
+      // Video monitoring: Detect when camera frames arrive and ensure active playback
       let cameraLiveDispatched = false;
       readyCheckInterval = setInterval(() => {
         if (!isMounted) return;
@@ -189,16 +203,23 @@ export const useSceneLifecycle = (
           (sceneEl.parentNode as HTMLElement | null)?.querySelector("video") ||
           document.querySelector("video");
 
-        if (videoEl && videoEl.readyState >= 2) {
-          if (!cameraLiveDispatched) {
-            cameraLiveDispatched = true;
-            onCameraLive?.();
+        if (videoEl) {
+          // If video element exists but paused, trigger play
+          if (videoEl.paused && videoEl.readyState >= 1) {
+            videoEl.play().catch(() => {});
           }
-          if (!videoEl.paused) {
-            handleArReady();
-            if (readyCheckInterval) {
-              clearInterval(readyCheckInterval);
-              readyCheckInterval = null;
+
+          if (videoEl.readyState >= 2) {
+            if (!cameraLiveDispatched) {
+              cameraLiveDispatched = true;
+              onCameraLive?.();
+            }
+            if (!videoEl.paused) {
+              handleArReady();
+              if (readyCheckInterval) {
+                clearInterval(readyCheckInterval);
+                readyCheckInterval = null;
+              }
             }
           }
         }
@@ -206,6 +227,8 @@ export const useSceneLifecycle = (
 
       cleanupListeners = () => {
         isMounted = false;
+        isStarting = false;
+        arStarted = false;
         if (startArTimeout) {
           clearTimeout(startArTimeout);
           startArTimeout = null;
@@ -239,23 +262,7 @@ export const useSceneLifecycle = (
           console.warn("Error stopping AR system", e);
         }
 
-        // Force WebGL context loss to prevent WebGL context exhaustion across tier switches
-        try {
-          const renderer = (sceneEl as unknown as {
-            renderer?: {
-              dispose?: () => void;
-              forceContextLoss?: () => void;
-            };
-          })?.renderer;
-          if (renderer) {
-            if (typeof renderer.dispose === "function") renderer.dispose();
-            if (typeof renderer.forceContextLoss === "function") renderer.forceContextLoss();
-          }
-        } catch (e) {
-          console.warn("Error cleaning WebGL renderer", e);
-        }
-
-        // Cleanly stop any orphaned media tracks
+        // Cleanly stop any orphaned media tracks and enforce driver release buffer
         stopAllCameraStreams();
       };
 
@@ -284,5 +291,5 @@ export const useSceneLifecycle = (
       if (startArTimeout) clearTimeout(startArTimeout);
       if (cleanupListeners) cleanupListeners();
     };
-  }, [scriptsLoaded, sceneRef, onReady, onError, selectedTier, onCameraLive]);
+  }, [scriptsLoaded, sceneRef, onReady, onError, selectedTier, onCameraLive, retryTrigger]);
 };

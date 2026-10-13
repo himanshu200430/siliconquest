@@ -9,6 +9,7 @@ export const SCRIPT_RESOURCES: ScriptResource[] = [
   },
   {
     src: "https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js",
+    fallbacks: ["/mindar-image-aframe.prod.js"],
   },
 ];
 

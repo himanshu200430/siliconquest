@@ -9,7 +9,7 @@ export const FrameOverlay = ({ tier = "Common" }: FrameOverlayProps) => {
   const frameColor = getTierFrameColor(tier);
 
   return (
-    <div className="absolute inset-0 pointer-events-none">
+    <div className="absolute inset-0 pointer-events-none z-[48]">
       <svg
         className="w-full h-full"
         viewBox="0 0 100 100"

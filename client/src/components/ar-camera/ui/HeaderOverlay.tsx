@@ -14,16 +14,21 @@ export const HeaderOverlay = ({
   onMindFileChange,
 }: HeaderOverlayProps) => (
   <>
-    {/* Close button with highest z-index to stay above all modals */}
+    {/* Close button with highest z-index to stay above all modals, overlays & loaders */}
     <button
-      onClick={onClose}
-      className="absolute top-4 right-4 w-10 h-10 rounded-full bg-red-500/20 border-2 border-red-400 flex items-center justify-center text-red-400 hover:bg-red-500/30 transition-all z-[60] shadow-lg"
+      type="button"
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onClose();
+      }}
+      className="absolute top-4 right-4 w-11 h-11 rounded-full bg-red-500/20 border-2 border-red-400 flex items-center justify-center text-red-400 hover:bg-red-500/40 hover:border-red-300 hover:text-white active:scale-90 transition-all z-[80] shadow-xl shadow-red-950/60 pointer-events-auto cursor-pointer touch-manipulation"
       aria-label="Close AR camera"
     >
-      ✕
+      <span className="text-xl font-bold leading-none select-none">✕</span>
     </button>
 
-    <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 to-transparent z-20 pointer-events-none">
+    <div className="absolute top-0 left-0 right-0 p-4 bg-gradient-to-b from-black/80 to-transparent z-50 pointer-events-none">
       <div className="flex flex-col gap-3">
         <div className="flex justify-between items-start">
           <div className="pointer-events-auto">
@@ -45,7 +50,11 @@ export const HeaderOverlay = ({
                 return (
                   <button
                     key={option.value}
-                    onClick={() => onMindFileChange(option.value)}
+                    onClick={() => {
+                      if (!isActive && onMindFileChange) {
+                        onMindFileChange(option.value);
+                      }
+                    }}
                     className={`px-3 py-1 rounded-full text-xs font-semibold transition-all border ${
                       isActive
                         ? "bg-purple-600/80 border-purple-400 text-white shadow-lg shadow-purple-500/30"

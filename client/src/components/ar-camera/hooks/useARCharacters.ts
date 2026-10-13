@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 
-import { getARCharacters } from "@/services/firestore";
+import { getARCharacters } from "@/services/api";
 import { Character, CharactersByTier, getTierFromValue } from "../types";
 
 interface UseARCharactersResult {
   charactersByTier: CharactersByTier;
+  allCharacters: Character[];
   loading: boolean;
   error: string | null;
   refetch: () => Promise<void>;
@@ -20,19 +21,11 @@ const validateCharacter = (char: unknown): char is Character => {
   const requiredFields: Array<keyof Character> = [
     "id",
     "name",
-    "question",
-    "options",
-    "correctAnswer",
     "value",
-    "isCaught",
-    "caughtByTeam",
   ];
 
   const missingFields = requiredFields.filter((field) => {
     const value = (char as Record<string, unknown>)[field as string];
-    if (field === "options") {
-      return !Array.isArray(value) || (value as unknown[]).length === 0;
-    }
     return value === undefined || value === null;
   });
 
@@ -58,6 +51,7 @@ export const useARCharacters = (): UseARCharactersResult => {
     Rare: [],
     Legendary: [],
   });
+  const [allCharacters, setAllCharacters] = useState<Character[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -72,14 +66,15 @@ export const useARCharacters = (): UseARCharactersResult => {
 
       if (validCharacters.length === 0 && data.length > 0) {
         setError(
-          "No valid AR characters found. Please check Firestore schema. " +
-            "See FIRESTORE_SCHEMA.md for required fields."
+          "No valid AR characters found. Please check database schema."
         );
       } else if (validCharacters.length < data.length) {
         console.warn(
           `${data.length - validCharacters.length} character(s) skipped due to missing fields`
         );
       }
+
+      setAllCharacters(validCharacters);
 
       // Group characters by tier
       const grouped: CharactersByTier = {
@@ -117,6 +112,7 @@ export const useARCharacters = (): UseARCharactersResult => {
 
   return {
     charactersByTier,
+    allCharacters,
     loading,
     error,
     refetch: fetchCharacters,

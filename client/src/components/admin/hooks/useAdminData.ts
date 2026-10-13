@@ -1,11 +1,4 @@
 import { useState, useCallback } from "react";
-import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import {
-  createDatabaseSnapshot,
-  resetDatabase,
-  restoreDatabaseFromSnapshot,
-} from "@/services/firestore";
 
 interface Team {
   id: string;
@@ -41,12 +34,11 @@ export const useAdminData = () => {
   const fetchTeams = useCallback(async () => {
     setIsLoading(true);
     try {
-      const teamsSnapshot = await getDocs(collection(db, "teams"));
-      const teamsData = teamsSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      })) as Team[];
-      setTeams(teamsData);
+      const res = await fetch("/api/admin/data");
+      if (res.ok) {
+        const data = await res.json();
+        setTeams(data.teams || []);
+      }
     } catch (err) {
       console.error("Error fetching teams:", err);
     } finally {
@@ -57,12 +49,11 @@ export const useAdminData = () => {
   const fetchCards = useCallback(async () => {
     setIsLoading(true);
     try {
-      const cardsSnapshot = await getDocs(collection(db, "cards"));
-      const cardsData = cardsSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      })) as Card[];
-      setCards(cardsData);
+      const res = await fetch("/api/admin/data");
+      if (res.ok) {
+        const data = await res.json();
+        setCards(data.cards || []);
+      }
     } catch (err) {
       console.error("Error fetching cards:", err);
     } finally {
@@ -77,8 +68,18 @@ export const useAdminData = () => {
     }
 
     try {
-      await deleteDoc(doc(db, "teams", teamId));
-      setTeams(teams.filter((team) => team.id !== teamId));
+      const res = await fetch("/api/admin/mutate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "delete_team",
+          id: teamId,
+          adminPassword: process.env.NEXT_PUBLIC_ADMIN_PASS,
+        }),
+      });
+      if (res.ok) {
+        setTeams((prev) => prev.filter((team) => team.id !== teamId));
+      }
       setDeleteConfirm(null);
     } catch (err) {
       console.error("Error deleting team:", err);
@@ -92,8 +93,18 @@ export const useAdminData = () => {
     }
 
     try {
-      await deleteDoc(doc(db, "cards", cardId));
-      setCards(cards.filter((card) => card.id !== cardId));
+      const res = await fetch("/api/admin/mutate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "delete_card",
+          id: cardId,
+          adminPassword: process.env.NEXT_PUBLIC_ADMIN_PASS,
+        }),
+      });
+      if (res.ok) {
+        setCards((prev) => prev.filter((card) => card.id !== cardId));
+      }
       setDeleteConfirm(null);
     } catch (err) {
       console.error("Error deleting card:", err);
@@ -130,20 +141,20 @@ export const useResetDatabase = (fetchTeams: () => Promise<void>, fetchCards: ()
     setResetError("");
 
     try {
-      const snapshot = await createDatabaseSnapshot();
-      setLastSnapshot({
-        teams: snapshot.teams as unknown as Team[],
-        cards: snapshot.cards as unknown as Card[],
-        timestamp: Date.now(),
+      await fetch("/api/admin/mutate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "reset_database",
+          adminPassword: adminPassword,
+        }),
       });
-
-      await resetDatabase();
       await fetchTeams();
       await fetchCards();
 
       setShowResetModal(false);
       setResetPassword("");
-      alert("Database reset successfully! You can undo this action if needed.");
+      alert("Database reset successfully!");
     } catch (err) {
       console.error("Error resetting database:", err);
       setResetError("Failed to reset database. Please try again.");
@@ -169,21 +180,8 @@ export const useResetDatabase = (fetchTeams: () => Promise<void>, fetchCards: ()
       return;
     }
 
-    try {
-      await restoreDatabaseFromSnapshot({
-        teams: lastSnapshot.teams as unknown as Array<{ id: string; [key: string]: unknown }>,
-        cards: lastSnapshot.cards as unknown as Array<{ id: string; [key: string]: unknown }>,
-      });
-
-      await fetchTeams();
-      await fetchCards();
-
-      setLastSnapshot(null);
-      alert("Last action undone successfully!");
-    } catch (err) {
-      console.error("Error undoing last action:", err);
-      alert("Failed to undo last action. Please try again.");
-    }
+    alert("Undo is not available for database reset.");
+    setLastSnapshot(null);
   };
 
   return {

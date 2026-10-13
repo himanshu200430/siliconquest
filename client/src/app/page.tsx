@@ -1,17 +1,22 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Pokeball from "@/components/Pokeball";
-import ARCamera from "@/components/ARCamera";
+const ARCamera = dynamic(() => import("@/components/ARCamera"), { ssr: false });
 import Leaderboard from "@/components/Leaderboard";
 import UncaughtCharacters from "@/components/UncaughtCharacters";
+import AdminPortal from "@/components/AdminPortal";
+import { PokeballLoader } from "@/components/ui/PokeballLoader";
 import {
   getTeams,
   getUncaughtCards,
   getCardsCaughtByTeam,
-} from "@/services/firestore";
+} from "@/services/api";
+import { usePolling } from "@/hooks/usePolling";
 import { getImageSrc, shouldDisplayAsText } from "@/utils/imageUtils";
+import { initCameraStreamNormalizer } from "@/components/ar-camera/utils/cameraStreamHelper";
 import type { Team, Card } from "@/types";
 
 export default function Home() {
@@ -23,34 +28,64 @@ export default function Home() {
   const [isARActive, setIsARActive] = useState(false);
   const [isPokeballExploding, setIsPokeballExploding] = useState(false);
   const [showUncaughtModal, setShowUncaughtModal] = useState(false);
+  const [showAdminPortal, setShowAdminPortal] = useState(false);
   const [uncaughtCount, setUncaughtCount] = useState<number | null>(null);
   const [isLoadingUncaughtCount, setIsLoadingUncaughtCount] = useState(true);
   const [teamSearchQuery, setTeamSearchQuery] = useState("");
 
-  // Load teams from Firestore
-  useEffect(() => {
-    const fetchTeams = async () => {
-      try {
-        setIsLoadingTeams(true);
-        const teamsData = await getTeams();
-        setTeams(teamsData);
-      } catch (error) {
-        console.error("Error loading teams:", error);
-      } finally {
-        setIsLoadingTeams(false);
-      }
-    };
-
-    fetchTeams();
+  const fetchTeams = useCallback(async () => {
+    try {
+      const teamsData = await getTeams();
+      setTeams(teamsData);
+    } catch (error) {
+      console.error("Error loading teams:", error);
+    } finally {
+      setIsLoadingTeams(false);
+    }
   }, []);
 
-  // Load selected team from localStorage on mount
+  // Initial load
+  useEffect(() => {
+    fetchTeams();
+  }, [fetchTeams]);
+
+  // Poll leaderboard every ~10s with jitter when AR camera is NOT open
+  usePolling(fetchTeams, {
+    intervalMs: 10000,
+    jitterMs: 3000,
+    enabled: !isARActive,
+  });
+
+  // Load selected team from localStorage or default to first available team
   useEffect(() => {
     const storedTeamId = localStorage.getItem("selectedTeamId");
     if (storedTeamId) {
       setSelectedTeamId(storedTeamId);
+    } else if (teams.length > 0 && !selectedTeamId) {
+      setSelectedTeamId(teams[0].id);
+      localStorage.setItem("selectedTeamId", teams[0].id);
     }
-  }, []);
+
+    const handleOpenAdmin = () => setShowAdminPortal(true);
+    window.addEventListener("open-admin-portal", handleOpenAdmin);
+
+    // Pre-warm AR target files & camera normalizer in background so clicking Pokeball is instantaneous
+    if (typeof window !== "undefined") {
+      initCameraStreamNormalizer();
+      const preloadTargets = () => {
+        ["/ar-targets/common.mind", "/ar-targets/rare.mind", "/ar-targets/legendary.mind"].forEach((target) => {
+          fetch(target, { cache: "force-cache" }).catch(() => {});
+        });
+      };
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(preloadTargets);
+      } else {
+        setTimeout(preloadTargets, 500);
+      }
+    }
+
+    return () => window.removeEventListener("open-admin-portal", handleOpenAdmin);
+  }, [teams, selectedTeamId]);
 
   const fetchCaughtCharacters = useCallback(async (teamId: string) => {
     try {
@@ -80,7 +115,21 @@ export default function Home() {
   // Load uncaught count only once on mount
   useEffect(() => {
     loadUncaughtCount();
-  }, []); // Remove loadUncaughtCount from dependencies to prevent infinite loop
+  }, [loadUncaughtCount]);
+
+  // Poll caught characters for the selected team every ~10s
+  usePolling(
+    useCallback(async () => {
+      if (selectedTeamId) {
+        await fetchCaughtCharacters(selectedTeamId);
+      }
+    }, [selectedTeamId, fetchCaughtCharacters]),
+    {
+      intervalMs: 10000,
+      jitterMs: 3000,
+      enabled: !isARActive && !!selectedTeamId,
+    }
+  );
 
   useEffect(() => {
     if (selectedTeamId) {
@@ -96,7 +145,20 @@ export default function Home() {
   };
 
   const handlePokeballClick = () => {
-    if (!selectedTeam) return;
+    if (isPokeballExploding) return;
+
+    let targetTeam = selectedTeam;
+    // Auto-select first team if player hasn't picked one yet so AR launches without friction
+    if (!targetTeam && teams.length > 0) {
+      targetTeam = teams[0];
+      setSelectedTeamId(teams[0].id);
+      localStorage.setItem("selectedTeamId", teams[0].id);
+    }
+
+    if (!targetTeam) {
+      console.warn("No teams available to launch AR camera");
+      return;
+    }
 
     setIsPokeballExploding(true);
 
@@ -104,7 +166,7 @@ export default function Home() {
     setTimeout(() => {
       setIsARActive(true);
       setIsPokeballExploding(false);
-    }, 600);
+    }, 700);
   };
 
   const handleARClose = () => {
@@ -143,10 +205,16 @@ export default function Home() {
 
   if (isLoadingTeams) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950 flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-purple-300">Loading teams...</p>
+      <div className="min-h-screen bg-gradient-to-b from-slate-950 via-purple-950/20 to-slate-950 flex flex-col items-center justify-center p-4">
+        <div className="w-full max-w-md flex flex-col gap-6">
+          <Header />
+          <div className="text-center py-12">
+            <PokeballLoader
+              size="lg"
+              label="INITIALIZING ANIMEVERSE REGISTRY"
+              sublabel="Syncing teams & active Pokémon hunters..."
+            />
+          </div>
         </div>
       </div>
     );
@@ -229,6 +297,7 @@ export default function Home() {
             <Pokeball
               onClick={handlePokeballClick}
               isExploding={isPokeballExploding}
+              teamName={selectedTeam?.teamName}
             />
 
             {/* Characters Left */}
@@ -336,12 +405,11 @@ export default function Home() {
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-purple-500/30 rounded-2xl p-4">
                   {isLoadingCaught ? (
                     <div className="flex items-center justify-center py-6">
-                      <div className="text-center">
-                        <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-3"></div>
-                        <p className="text-purple-300 text-sm">
-                          Loading caught characters...
-                        </p>
-                      </div>
+                      <PokeballLoader
+                        size="md"
+                        label="SYNCING POKÉDEX"
+                        sublabel="Loading caught characters..."
+                      />
                     </div>
                   ) : charactersCaught.length === 0 ? (
                     <div className="text-center py-6">
@@ -465,10 +533,10 @@ export default function Home() {
       </div>
 
       {/* AR Camera Overlay */}
-      {isARActive && selectedTeam && (
+      {isARActive && (selectedTeam || teams[0]) && (
         <ARCamera
-          teamName={selectedTeam.teamName}
-          teamId={selectedTeam.id}
+          teamName={(selectedTeam || teams[0]).teamName}
+          teamId={(selectedTeam || teams[0]).id}
           onClose={handleARClose}
           onCharacterCollected={handleCharacterCollected}
         />
@@ -480,6 +548,11 @@ export default function Home() {
         onClose={() => setShowUncaughtModal(false)}
         onCountChange={handleUncaughtCountChange}
       />
+
+      {/* Admin Portal Modal */}
+      {showAdminPortal && (
+        <AdminPortal onClose={() => setShowAdminPortal(false)} />
+      )}
     </>
   );
 }

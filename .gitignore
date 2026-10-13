@@ -48,3 +48,28 @@ next-env.d.ts
 
 # OS
 Thumbs.db
+
+# Firebase service account key (migration only — delete after use)
+scripts/serviceAccountKey.json
+
+# Prisma
+client/prisma/migrations/**/migration_lock.toml
+
+# Temporary AR compilation scripts & intermediate artifacts
+mind-ar-*.tgz
+scripts/batch_*.mind
+scripts/compile_batch_*.html
+scripts/*.mind
+scripts/extracted_cards/
+scripts/*.html
+scripts/worker.js
+scripts/ui-*.js
+scripts/controller-*.js
+scripts/msgpack.min.js
+scripts/mindar-image*.prod.js
+scripts/test_*.py
+scripts/run_*.py
+scripts/extract_worker.py
+scripts/patch_worker.py
+
+

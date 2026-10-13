@@ -1,0 +1,70 @@
+// Supabase Postgres — pooler on 6543 for queries, direct on 5432 for migrations
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")      // pooler (port 6543) with ?pgbouncer=true&connection_limit=1
+  directUrl = env("DIRECT_URL")        // direct (port 5432) — used by prisma migrate
+}
+
+/// A scannable AR card / character poster.
+/// The `id` matches the Firestore document id (e.g. "char_004", "c101") so
+/// .mind-file mapping keeps working without changes.
+model Card {
+  id            String   @id                  // e.g. "char_004"
+  name          String
+  series        String   @default("")
+  value         Int
+  tier          String                        // "Common" | "Rare" | "Legendary"
+  image         String   @default("")
+  mindFile      String                        // filename only, e.g. "mewtwo.mind"
+  modelUrl      String   @default("")
+  question      String   @default("Which technology stack is used in SiliconQuest?")
+  options       String[] @default(["Next.js & Supabase", "PHP & MySQL", "Ruby on Rails", "Java Spring Boot"])
+  correctAnswer Int      @default(0)          // 0-3, NEVER sent to clients
+  copies        Int      @default(1)          // how many physical copies exist
+  caughtCount   Int      @default(0)          // how many teams have caught it so far
+
+  catches       Catch[]
+  cooldowns     Cooldown[]
+}
+
+/// A participating team.
+model Team {
+  id    String @id                            // e.g. "team_001"
+  name  String @unique                        // display name
+  score Int    @default(0)
+
+  catches   Catch[]
+  cooldowns Cooldown[]
+}
+
+/// Records that a team caught a card.  The unique constraint prevents
+/// the same team from catching the same card twice.
+model Catch {
+  id        String   @id @default(cuid())
+  teamId    String
+  cardId    String
+  createdAt DateTime @default(now())
+
+  team Team @relation(fields: [teamId], references: [id])
+  card Card @relation(fields: [cardId], references: [id])
+
+  @@unique([teamId, cardId])
+}
+
+/// Server-side quiz cooldown (replaces localStorage).
+/// Composite PK = one row per (team, card).
+model Cooldown {
+  teamId     String
+  cardId     String
+  attempts   Int      @default(0)
+  lockedUntil DateTime
+
+  team Team @relation(fields: [teamId], references: [id])
+  card Card @relation(fields: [cardId], references: [id])
+
+  @@id([teamId, cardId])
+}

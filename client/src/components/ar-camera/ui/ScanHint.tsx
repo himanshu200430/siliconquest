@@ -6,7 +6,7 @@ export const ScanHint = ({ visible }: ScanHintProps) => {
   if (!visible) return null;
 
   return (
-    <div className="absolute bottom-24 left-0 right-0 text-center animate-pulse z-30">
+    <div className="absolute bottom-24 left-0 right-0 text-center animate-pulse z-[50] pointer-events-none">
       <p className="text-purple-300 text-sm font-medium">
         Point your camera at a character poster
       </p>

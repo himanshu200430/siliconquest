@@ -5,13 +5,14 @@ export interface Character {
   name: string;
   image?: string;
   tier?: Tier; // Optional - calculated from value
-  question: string;
-  options: string[];
-  correctAnswer: number;
+  question?: string;
+  options?: string[];
+  correctAnswer?: number; // Kept as optional for backwards compatibility, never sent by API
   value: number;
   isCaught: boolean;
-  caughtByTeam: string;
+  caughtByTeam?: string;
   modelUrl?: string;
+  copiesLeft?: number;
 }
 
 // Helper to calculate tier from value

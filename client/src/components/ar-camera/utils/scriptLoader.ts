@@ -42,7 +42,7 @@ const loadScript = (src: string) =>
 
     const script = document.createElement("script");
     script.src = src;
-    script.async = true;
+    script.async = false;
     script.dataset.loaded = "false";
     script.onload = () => {
       script.dataset.loaded = "true";

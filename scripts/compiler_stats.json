@@ -1,0 +1,1586 @@
+[
+  {
+    "cardId": "char_001",
+    "image": "/client/public/cards/mewtwo.png",
+    "totalFeaturePoints": 89,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 49
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 40
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_002",
+    "image": "/client/public/cards/alien-x.png",
+    "totalFeaturePoints": 70,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 39
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 31
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_003",
+    "image": "/client/public/cards/muzan.png",
+    "totalFeaturePoints": 67,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 37
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_004",
+    "image": "/client/public/cards/beerus.png",
+    "totalFeaturePoints": 86,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 50
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 36
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_005",
+    "image": "/client/public/cards/goku.png",
+    "totalFeaturePoints": 97,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 52
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 45
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_006",
+    "image": "/client/public/cards/satoru-gojo.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 43
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 36
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_007",
+    "image": "/client/public/cards/eren.png",
+    "totalFeaturePoints": 54,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 31
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 23
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_008",
+    "image": "/client/public/cards/hornet.png",
+    "totalFeaturePoints": 69,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 42
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 27
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_009",
+    "image": "/client/public/cards/madara.png",
+    "totalFeaturePoints": 83,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 47
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 36
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_010",
+    "image": "/client/public/cards/sukuna.png",
+    "totalFeaturePoints": 75,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 43
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 32
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_011",
+    "image": "/client/public/cards/erwin.png",
+    "totalFeaturePoints": 73,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 43
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_012",
+    "image": "/client/public/cards/broly.png",
+    "totalFeaturePoints": 78,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 49
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 29
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_013",
+    "image": "/client/public/cards/charizard.png",
+    "totalFeaturePoints": 76,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 43
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 33
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_014",
+    "image": "/client/public/cards/reiner.png",
+    "totalFeaturePoints": 74,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 40
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 34
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_015",
+    "image": "/client/public/cards/itadori.png",
+    "totalFeaturePoints": 60,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 33
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 27
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_016",
+    "image": "/client/public/cards/gohan.png",
+    "totalFeaturePoints": 85,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 47
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 38
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_017",
+    "image": "/client/public/cards/rengoku.png",
+    "totalFeaturePoints": 81,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 42
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 39
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_018",
+    "image": "/client/public/cards/whis.png",
+    "totalFeaturePoints": 73,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 40
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 33
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_019",
+    "image": "/client/public/cards/yuta.png",
+    "totalFeaturePoints": 76,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 46
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_020",
+    "image": "/client/public/cards/giyu.png",
+    "totalFeaturePoints": 74,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 44
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_021",
+    "image": "/client/public/cards/frieza.png",
+    "totalFeaturePoints": 64,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 33
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 31
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_022",
+    "image": "/client/public/cards/gengar.png",
+    "totalFeaturePoints": 68,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 49
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 19
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_023",
+    "image": "/client/public/cards/vegeta.png",
+    "totalFeaturePoints": 85,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 46
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 39
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_024",
+    "image": "/client/public/cards/mikasa.png",
+    "totalFeaturePoints": 75,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 40
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 35
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_025",
+    "image": "/client/public/cards/four-arms.png",
+    "totalFeaturePoints": 81,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 40
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 41
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_026",
+    "image": "/client/public/cards/xlr8.png",
+    "totalFeaturePoints": 65,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 36
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 29
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_027",
+    "image": "/client/public/cards/armin.png",
+    "totalFeaturePoints": 66,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 38
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 28
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_028",
+    "image": "/client/public/cards/diamondhead.png",
+    "totalFeaturePoints": 61,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 31
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_029",
+    "image": "/client/public/cards/megumi.png",
+    "totalFeaturePoints": 83,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 47
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 36
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_030",
+    "image": "/client/public/cards/heatblast.png",
+    "totalFeaturePoints": 63,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 37
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 26
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_031",
+    "image": "/client/public/cards/snorlax.png",
+    "totalFeaturePoints": 60,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 31
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 29
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_032",
+    "image": "/client/public/cards/tanjiro.png",
+    "totalFeaturePoints": 85,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 51
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 34
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_033",
+    "image": "/client/public/cards/pikachu.png",
+    "totalFeaturePoints": 73,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 39
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 34
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_034",
+    "image": "/client/public/cards/nobara.png",
+    "totalFeaturePoints": 75,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 39
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 36
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_035",
+    "image": "/client/public/cards/nezuko.png",
+    "totalFeaturePoints": 81,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 48
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 33
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_036",
+    "image": "/client/public/cards/falco.png",
+    "totalFeaturePoints": 69,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 41
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 28
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_037",
+    "image": "/client/public/cards/machamp.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 45
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 34
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_038",
+    "image": "/client/public/cards/alakazam.png",
+    "totalFeaturePoints": 70,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 38
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 32
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_039",
+    "image": "/client/public/cards/bulbasaur.png",
+    "totalFeaturePoints": 60,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 36
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 24
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_040",
+    "image": "/client/public/cards/geodude.png",
+    "totalFeaturePoints": 80,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 43
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 37
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_041",
+    "image": "/client/public/cards/porygon.png",
+    "totalFeaturePoints": 67,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 40
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 27
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_042",
+    "image": "/client/public/cards/ditto.png",
+    "totalFeaturePoints": 83,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 49
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 34
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_043",
+    "image": "/client/public/cards/stinkfly.png",
+    "totalFeaturePoints": 80,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 44
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 36
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_044",
+    "image": "/client/public/cards/ghostfreak.png",
+    "totalFeaturePoints": 85,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 46
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 39
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_045",
+    "image": "/client/public/cards/wildmutt.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 51
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 28
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_046",
+    "image": "/client/public/cards/zenitsu.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 48
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 31
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_047",
+    "image": "/client/public/cards/inosuke.png",
+    "totalFeaturePoints": 72,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 41
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 31
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_048",
+    "image": "/client/public/cards/gyutaro.png",
+    "totalFeaturePoints": 49,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 31
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 18
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_049",
+    "image": "/client/public/cards/android-18.png",
+    "totalFeaturePoints": 74,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 44
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_050",
+    "image": "/client/public/cards/cell.png",
+    "totalFeaturePoints": 62,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 35
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 27
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_051",
+    "image": "/client/public/cards/majin-buu.png",
+    "totalFeaturePoints": 93,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 48
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 45
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_052",
+    "image": "/client/public/cards/todo.png",
+    "totalFeaturePoints": 74,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 44
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_053",
+    "image": "/client/public/cards/geto.png",
+    "totalFeaturePoints": 72,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 43
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 29
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_054",
+    "image": "/client/public/cards/mahito.png",
+    "totalFeaturePoints": 95,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 54
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 41
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_055",
+    "image": "/client/public/cards/squirtle.png",
+    "totalFeaturePoints": 66,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 36
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_056",
+    "image": "/client/public/cards/eevee.png",
+    "totalFeaturePoints": 61,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 38
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 23
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_057",
+    "image": "/client/public/cards/magikarp.png",
+    "totalFeaturePoints": 81,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 41
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 40
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_058",
+    "image": "/client/public/cards/grey-matter.png",
+    "totalFeaturePoints": 71,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 42
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 29
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_059",
+    "image": "/client/public/cards/upgrade.png",
+    "totalFeaturePoints": 59,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 36
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 23
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_060",
+    "image": "/client/public/cards/way-big.png",
+    "totalFeaturePoints": 58,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 35
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 23
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_061",
+    "image": "/client/public/cards/cannonbolt.png",
+    "totalFeaturePoints": 84,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 43
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 41
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_062",
+    "image": "/client/public/cards/echo.png",
+    "totalFeaturePoints": 67,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 39
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 28
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_063",
+    "image": "/client/public/cards/shinobu.png",
+    "totalFeaturePoints": 86,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 48
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 38
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_064",
+    "image": "/client/public/cards/jigglypuff.png",
+    "totalFeaturePoints": 74,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 43
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 31
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_065",
+    "image": "/client/public/cards/meowth.png",
+    "totalFeaturePoints": 71,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 41
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_066",
+    "image": "/client/public/cards/psyduck.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 45
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 34
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_067",
+    "image": "/client/public/cards/swamp-fire.png",
+    "totalFeaturePoints": 53,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 34
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 19
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_068",
+    "image": "/client/public/cards/humungousaur.png",
+    "totalFeaturePoints": 58,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 35
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 23
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_069",
+    "image": "/client/public/cards/ripjaws.png",
+    "totalFeaturePoints": 74,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 47
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 27
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_070",
+    "image": "/client/public/cards/uzui.png",
+    "totalFeaturePoints": 76,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 46
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_071",
+    "image": "/client/public/cards/akaza.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 47
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 32
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_072",
+    "image": "/client/public/cards/doma.png",
+    "totalFeaturePoints": 70,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 43
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 27
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_073",
+    "image": "/client/public/cards/haganezuka.png",
+    "totalFeaturePoints": 85,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 48
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 37
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_074",
+    "image": "/client/public/cards/piccolo.png",
+    "totalFeaturePoints": 72,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 42
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_075",
+    "image": "/client/public/cards/trunks.png",
+    "totalFeaturePoints": 87,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 50
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 37
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_076",
+    "image": "/client/public/cards/satan.png",
+    "totalFeaturePoints": 86,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 45
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 41
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_077",
+    "image": "/client/public/cards/shenron.png",
+    "totalFeaturePoints": 64,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 42
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 22
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_078",
+    "image": "/client/public/cards/nanami.png",
+    "totalFeaturePoints": 68,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 39
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 29
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_079",
+    "image": "/client/public/cards/jogo.png",
+    "totalFeaturePoints": 72,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 40
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 32
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_080",
+    "image": "/client/public/cards/hanami.png",
+    "totalFeaturePoints": 59,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 34
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 25
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_081",
+    "image": "/client/public/cards/choso.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 44
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 35
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_082",
+    "image": "/client/public/cards/daki.png",
+    "totalFeaturePoints": 68,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 38
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_083",
+    "image": "/client/public/cards/kanao.png",
+    "totalFeaturePoints": 81,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 43
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 38
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_084",
+    "image": "/client/public/cards/genya.png",
+    "totalFeaturePoints": 68,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 47
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 21
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_085",
+    "image": "/client/public/cards/krillin.png",
+    "totalFeaturePoints": 74,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 44
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 30
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_086",
+    "image": "/client/public/cards/roshi.png",
+    "totalFeaturePoints": 83,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 45
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 38
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_087",
+    "image": "/client/public/cards/bulma.png",
+    "totalFeaturePoints": 61,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 35
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 26
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_088",
+    "image": "/client/public/cards/panda.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 43
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 36
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_089",
+    "image": "/client/public/cards/toge.png",
+    "totalFeaturePoints": 63,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 39
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 24
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_090",
+    "image": "/client/public/cards/maki.png",
+    "totalFeaturePoints": 71,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 40
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 31
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_091",
+    "image": "/client/public/cards/hange.png",
+    "totalFeaturePoints": 79,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 44
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 35
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_092",
+    "image": "/client/public/cards/zeke.png",
+    "totalFeaturePoints": 68,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 43
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 25
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_093",
+    "image": "/client/public/cards/annie.png",
+    "totalFeaturePoints": 72,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 37
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 35
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_094",
+    "image": "/client/public/cards/gabi.png",
+    "totalFeaturePoints": 63,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 36
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 27
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_095",
+    "image": "/client/public/cards/reiss.png",
+    "totalFeaturePoints": 73,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3244613434727503,
+        "count": 35
+      },
+      {
+        "scale": 0.16223067173637515,
+        "count": 38
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_096",
+    "image": "/client/public/cards/pieck.png",
+    "totalFeaturePoints": 68,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 36
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 32
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_097",
+    "image": "/client/public/cards/sasha.png",
+    "totalFeaturePoints": 74,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3248730964467005,
+        "count": 39
+      },
+      {
+        "scale": 0.16243654822335024,
+        "count": 35
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_098",
+    "image": "/client/public/cards/jean.png",
+    "totalFeaturePoints": 77,
+    "trackingScalePoints": [
+      {
+        "scale": 0.3228247162673392,
+        "count": 44
+      },
+      {
+        "scale": 0.1614123581336696,
+        "count": 33
+      }
+    ],
+    "matchingPoints": 10
+  },
+  {
+    "cardId": "char_099",
+    "image": "/client/public/cards/connie.png",
+    "totalFeaturePoints": 76,
+    "trackingScalePoints": [
+      {
+        "scale": 0.32323232323232326,
+        "count": 43
+      },
+      {
+        "scale": 0.16161616161616163,
+        "count": 33
+      }
+    ],
+    "matchingPoints": 10
+  }
+]

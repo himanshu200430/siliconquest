@@ -1,0 +1,794 @@
+{
+  "0": {
+    "id": "char_001",
+    "name": "Mewtwo",
+    "series": "Pokemon",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/mewtwo.png"
+  },
+  "1": {
+    "id": "char_002",
+    "name": "Alien X",
+    "series": "Ben 10",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/alien-x.png"
+  },
+  "2": {
+    "id": "char_003",
+    "name": "Muzan",
+    "series": "Demon Slayer",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/muzan.png"
+  },
+  "3": {
+    "id": "char_004",
+    "name": "Beerus",
+    "series": "Dragon Ball",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/beerus.png"
+  },
+  "4": {
+    "id": "char_005",
+    "name": "Goku",
+    "series": "Dragon Ball",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/goku.png"
+  },
+  "5": {
+    "id": "char_006",
+    "name": "Satoru Gojo",
+    "series": "Jujutsu Kaisen",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/satoru-gojo.png"
+  },
+  "6": {
+    "id": "char_007",
+    "name": "Eren",
+    "series": "Attack on Titan",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/eren.png"
+  },
+  "7": {
+    "id": "char_008",
+    "name": "Hornet",
+    "series": "Hollow Knight",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/hornet.png"
+  },
+  "8": {
+    "id": "char_009",
+    "name": "Madara",
+    "series": "Naruto",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/madara.png"
+  },
+  "9": {
+    "id": "char_010",
+    "name": "Sukuna",
+    "series": "Jujutsu Kaisen",
+    "tier": "Legendary",
+    "value": 50,
+    "image": "/cards/sukuna.png"
+  },
+  "10": {
+    "id": "char_011",
+    "name": "Erwin",
+    "series": "Attack on Titan",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/erwin.png"
+  },
+  "11": {
+    "id": "char_012",
+    "name": "Broly",
+    "series": "Dragon Ball",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/broly.png"
+  },
+  "12": {
+    "id": "char_013",
+    "name": "Charizard",
+    "series": "Pokemon",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/charizard.png"
+  },
+  "13": {
+    "id": "char_014",
+    "name": "Reiner",
+    "series": "Attack on Titan",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/reiner.png"
+  },
+  "14": {
+    "id": "char_015",
+    "name": "Itadori",
+    "series": "Jujutsu Kaisen",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/itadori.png"
+  },
+  "15": {
+    "id": "char_016",
+    "name": "Gohan",
+    "series": "Dragon Ball",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/gohan.png"
+  },
+  "16": {
+    "id": "char_017",
+    "name": "Rengoku",
+    "series": "Demon Slayer",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/rengoku.png"
+  },
+  "17": {
+    "id": "char_018",
+    "name": "Whis",
+    "series": "Dragon Ball",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/whis.png"
+  },
+  "18": {
+    "id": "char_019",
+    "name": "Yuta",
+    "series": "Jujutsu Kaisen",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/yuta.png"
+  },
+  "19": {
+    "id": "char_020",
+    "name": "Giyu",
+    "series": "Demon Slayer",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/giyu.png"
+  },
+  "20": {
+    "id": "char_021",
+    "name": "Frieza",
+    "series": "Dragon Ball",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/frieza.png"
+  },
+  "21": {
+    "id": "char_022",
+    "name": "Gengar",
+    "series": "Pokemon",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/gengar.png"
+  },
+  "22": {
+    "id": "char_023",
+    "name": "Vegeta",
+    "series": "Dragon Ball",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/vegeta.png"
+  },
+  "23": {
+    "id": "char_024",
+    "name": "Mikasa",
+    "series": "Attack on Titan",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/mikasa.png"
+  },
+  "24": {
+    "id": "char_025",
+    "name": "Four Arms",
+    "series": "Ben 10",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/four-arms.png"
+  },
+  "25": {
+    "id": "char_026",
+    "name": "XLR8",
+    "series": "Ben 10",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/xlr8.png"
+  },
+  "26": {
+    "id": "char_027",
+    "name": "Armin",
+    "series": "Attack on Titan",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/armin.png"
+  },
+  "27": {
+    "id": "char_028",
+    "name": "Diamondhead",
+    "series": "Ben 10",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/diamondhead.png"
+  },
+  "28": {
+    "id": "char_029",
+    "name": "Megumi",
+    "series": "Jujutsu Kaisen",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/megumi.png"
+  },
+  "29": {
+    "id": "char_030",
+    "name": "Heatblast",
+    "series": "Ben 10",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/heatblast.png"
+  },
+  "30": {
+    "id": "char_031",
+    "name": "Snorlax",
+    "series": "Pokemon",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/snorlax.png"
+  },
+  "31": {
+    "id": "char_032",
+    "name": "Tanjiro",
+    "series": "Demon Slayer",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/tanjiro.png"
+  },
+  "32": {
+    "id": "char_033",
+    "name": "Pikachu",
+    "series": "Pokemon",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/pikachu.png"
+  },
+  "33": {
+    "id": "char_034",
+    "name": "Nobara",
+    "series": "Jujutsu Kaisen",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/nobara.png"
+  },
+  "34": {
+    "id": "char_035",
+    "name": "Nezuko",
+    "series": "Demon Slayer",
+    "tier": "Rare",
+    "value": 25,
+    "image": "/cards/nezuko.png"
+  },
+  "35": {
+    "id": "char_036",
+    "name": "Falco",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/falco.png"
+  },
+  "36": {
+    "id": "char_037",
+    "name": "Machamp",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/machamp.png"
+  },
+  "37": {
+    "id": "char_038",
+    "name": "Alakazam",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/alakazam.png"
+  },
+  "38": {
+    "id": "char_039",
+    "name": "Bulbasaur",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/bulbasaur.png"
+  },
+  "39": {
+    "id": "char_040",
+    "name": "Geodude",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/geodude.png"
+  },
+  "40": {
+    "id": "char_041",
+    "name": "Porygon",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/porygon.png"
+  },
+  "41": {
+    "id": "char_042",
+    "name": "Ditto",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/ditto.png"
+  },
+  "42": {
+    "id": "char_043",
+    "name": "Stinkfly",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/stinkfly.png"
+  },
+  "43": {
+    "id": "char_044",
+    "name": "Ghostfreak",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/ghostfreak.png"
+  },
+  "44": {
+    "id": "char_045",
+    "name": "Wildmutt",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/wildmutt.png"
+  },
+  "45": {
+    "id": "char_046",
+    "name": "Zenitsu",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/zenitsu.png"
+  },
+  "46": {
+    "id": "char_047",
+    "name": "Inosuke",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/inosuke.png"
+  },
+  "47": {
+    "id": "char_048",
+    "name": "Gyutaro",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/gyutaro.png"
+  },
+  "48": {
+    "id": "char_049",
+    "name": "Android 18",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/android-18.png"
+  },
+  "49": {
+    "id": "char_050",
+    "name": "Cell",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/cell.png"
+  },
+  "50": {
+    "id": "char_051",
+    "name": "Majin Buu",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/majin-buu.png"
+  },
+  "51": {
+    "id": "char_052",
+    "name": "Todo",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/todo.png"
+  },
+  "52": {
+    "id": "char_053",
+    "name": "Geto",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/geto.png"
+  },
+  "53": {
+    "id": "char_054",
+    "name": "Mahito",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/mahito.png"
+  },
+  "54": {
+    "id": "char_055",
+    "name": "Squirtle",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/squirtle.png"
+  },
+  "55": {
+    "id": "char_056",
+    "name": "Eevee",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/eevee.png"
+  },
+  "56": {
+    "id": "char_057",
+    "name": "Magikarp",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/magikarp.png"
+  },
+  "57": {
+    "id": "char_058",
+    "name": "Grey Matter",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/grey-matter.png"
+  },
+  "58": {
+    "id": "char_059",
+    "name": "Upgrade",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/upgrade.png"
+  },
+  "59": {
+    "id": "char_060",
+    "name": "Way Big",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/way-big.png"
+  },
+  "60": {
+    "id": "char_061",
+    "name": "Cannonbolt",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/cannonbolt.png"
+  },
+  "61": {
+    "id": "char_062",
+    "name": "Echo",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/echo.png"
+  },
+  "62": {
+    "id": "char_063",
+    "name": "Shinobu",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/shinobu.png"
+  },
+  "63": {
+    "id": "char_064",
+    "name": "Jigglypuff",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/jigglypuff.png"
+  },
+  "64": {
+    "id": "char_065",
+    "name": "Meowth",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/meowth.png"
+  },
+  "65": {
+    "id": "char_066",
+    "name": "Psyduck",
+    "series": "Pokemon",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/psyduck.png"
+  },
+  "66": {
+    "id": "char_067",
+    "name": "Swamp Fire",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/swamp-fire.png"
+  },
+  "67": {
+    "id": "char_068",
+    "name": "Humungousaur",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/humungousaur.png"
+  },
+  "68": {
+    "id": "char_069",
+    "name": "Ripjaws",
+    "series": "Ben 10",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/ripjaws.png"
+  },
+  "69": {
+    "id": "char_070",
+    "name": "Uzui",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/uzui.png"
+  },
+  "70": {
+    "id": "char_071",
+    "name": "Akaza",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/akaza.png"
+  },
+  "71": {
+    "id": "char_072",
+    "name": "Doma",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/doma.png"
+  },
+  "72": {
+    "id": "char_073",
+    "name": "Haganezuka",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/haganezuka.png"
+  },
+  "73": {
+    "id": "char_074",
+    "name": "Piccolo",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/piccolo.png"
+  },
+  "74": {
+    "id": "char_075",
+    "name": "Trunks",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/trunks.png"
+  },
+  "75": {
+    "id": "char_076",
+    "name": "Satan",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/satan.png"
+  },
+  "76": {
+    "id": "char_077",
+    "name": "Shenron",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/shenron.png"
+  },
+  "77": {
+    "id": "char_078",
+    "name": "Nanami",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/nanami.png"
+  },
+  "78": {
+    "id": "char_079",
+    "name": "Jogo",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/jogo.png"
+  },
+  "79": {
+    "id": "char_080",
+    "name": "Hanami",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/hanami.png"
+  },
+  "80": {
+    "id": "char_081",
+    "name": "Choso",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/choso.png"
+  },
+  "81": {
+    "id": "char_082",
+    "name": "Daki",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/daki.png"
+  },
+  "82": {
+    "id": "char_083",
+    "name": "Kanao",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/kanao.png"
+  },
+  "83": {
+    "id": "char_084",
+    "name": "Genya",
+    "series": "Demon Slayer",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/genya.png"
+  },
+  "84": {
+    "id": "char_085",
+    "name": "Krillin",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/krillin.png"
+  },
+  "85": {
+    "id": "char_086",
+    "name": "Roshi",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/roshi.png"
+  },
+  "86": {
+    "id": "char_087",
+    "name": "Bulma",
+    "series": "Dragon Ball",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/bulma.png"
+  },
+  "87": {
+    "id": "char_088",
+    "name": "Panda",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/panda.png"
+  },
+  "88": {
+    "id": "char_089",
+    "name": "Toge",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/toge.png"
+  },
+  "89": {
+    "id": "char_090",
+    "name": "Maki",
+    "series": "Jujutsu Kaisen",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/maki.png"
+  },
+  "90": {
+    "id": "char_091",
+    "name": "Hange",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/hange.png"
+  },
+  "91": {
+    "id": "char_092",
+    "name": "Zeke",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/zeke.png"
+  },
+  "92": {
+    "id": "char_093",
+    "name": "Annie",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/annie.png"
+  },
+  "93": {
+    "id": "char_094",
+    "name": "Gabi",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/gabi.png"
+  },
+  "94": {
+    "id": "char_095",
+    "name": "Reiss",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/reiss.png"
+  },
+  "95": {
+    "id": "char_096",
+    "name": "Pieck",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/pieck.png"
+  },
+  "96": {
+    "id": "char_097",
+    "name": "Sasha",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/sasha.png"
+  },
+  "97": {
+    "id": "char_098",
+    "name": "Jean",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/jean.png"
+  },
+  "98": {
+    "id": "char_099",
+    "name": "Connie",
+    "series": "Attack on Titan",
+    "tier": "Common",
+    "value": 10,
+    "image": "/cards/connie.png"
+  }
+}

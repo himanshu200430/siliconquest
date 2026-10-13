@@ -1,6 +1,19 @@
 import { createElement, MutableRefObject, useMemo } from "react";
+import { Character, MindARSceneElement, Tier } from "../types";
+import targetMapData from "@/data/targetMap.json";
 
-import { Character, MindARSceneElement, Tier, TIER_CONFIG } from "../types";
+interface TargetMapEntry {
+  id: string;
+  name: string;
+  series: string;
+  tier: string;
+  value: number;
+  image: string;
+}
+
+const targetEntries: [string, TargetMapEntry][] = Object.entries(
+  targetMapData as Record<string, TargetMapEntry>
+);
 
 interface MindARSceneProps {
   sceneRef: MutableRefObject<MindARSceneElement | null>;
@@ -10,26 +23,36 @@ interface MindARSceneProps {
     characterId: string,
     targetIndex: number
   ) => (el: Element | null) => void;
-  selectedTier: Tier;
+  selectedTier?: Tier;
 }
 
 export const MindARScene = ({
   sceneRef,
   characters,
-  // animationMixerAvailable, // Currently unused but kept for future animation features
+  // animationMixerAvailable,
   registerTargetRef,
-  selectedTier,
 }: MindARSceneProps) => {
-  // Get the .mind file for the selected tier
-  const targetSrc = useMemo(() => {
-    return `/ar-targets/${TIER_CONFIG[selectedTier].mindFile}`;
-  }, [selectedTier]);
+  // Option A: Single combined target file containing all 99 scannable cards
+  const targetSrc = useMemo(() => "/ar-targets/cards.mind", []);
+
+  // Map of 3D models if provided
+  const modelMap = useMemo(() => {
+    const map = new Map<string, string>();
+    characters.forEach((char) => {
+      if (char.modelUrl) {
+        map.set(char.id, char.modelUrl);
+      }
+    });
+    return map;
+  }, [characters]);
+
   return createElement(
     "a-scene",
     {
+      id: "mindar-scene-all",
       ref: sceneRef,
-      // here - MindAR automatically accesses device camera when mindar-image is initialized
-      "mindar-image": `imageTargetSrc: ${targetSrc}; filterMinCF:0.0001; filterBeta: 10`,
+      // MindAR configured with maxTrack: 1 and cards.mind
+      "mindar-image": `imageTargetSrc: ${targetSrc}; maxTrack: 1; autoStart: false; filterMinCF: 0.0001; filterBeta: 10; uiLoading: no; uiScanning: no; uiError: no`,
       "color-space": "sRGB",
       renderer:
         "colorManagement: true, physicallyCorrectLights: true, legacyLights: false",
@@ -41,7 +64,7 @@ export const MindARScene = ({
 
     createElement(
       "a-assets",
-      null,
+      { timeout: 2000 },
       characters
         .filter((character) => !!character.modelUrl)
         .map(
@@ -54,7 +77,8 @@ export const MindARScene = ({
             })
         )
     ),
-    // here - a-camera element renders the AR camera view
+
+    // Camera element
     createElement("a-camera", {
       position: "0 0 0",
     }),
@@ -65,44 +89,29 @@ export const MindARScene = ({
       light: "type: directional; intensity: 0.8",
       position: "0 1 0",
     }),
-    // Render a target entity for each character in the selected tier
 
-    characters.length > 0 &&
-      characters.map((character, index) =>
-        createElement(
-          "a-entity",
-          {
-            key: character.id,
-            ref: registerTargetRef(character.id, index),
-            "mindar-image-target": `targetIndex: ${index}`,
-          },
-          character.modelUrl &&
-            createElement("a-gltf-model", {
-              src: `#character-model-${character.id}`, // Using the modelUrl from the character data
-              position: "0 0 0",
-              rotation: "60 0 0",
-              scale: "1 1 1",
-              "animation-mixer":
-                "clip: pm0149_00_00_20001_battlewait01_loop; loop: repeat",
-            })
-          // : createElement(
-          //     "a-plane",
-          //     {
-          //       position: "0 0 0",
-          //       rotation: "0 0 0",
-          //       height: "0.8",
-          //       width: "0.8",
-          //       color: TIER_CONFIG[selectedTier].color,
-          //     },
-          //     createElement("a-text", {
-          //       value: character.name,
-          //       position: "0 0 0.1",
-          //       align: "center",
-          //       width: "1.5",
-          //       color: "#ffffff",
-          //     })
-          //   )
-        )
-      )
+    // Dynamically render a target entity for all 99 cards from targetMap.json
+    targetEntries.map(([indexStr, entry]) => {
+      const targetIndex = parseInt(indexStr, 10);
+      const modelUrl = modelMap.get(entry.id);
+
+      return createElement(
+        "a-entity",
+        {
+          key: entry.id,
+          ref: registerTargetRef(entry.id, targetIndex),
+          "mindar-image-target": `targetIndex: ${targetIndex}`,
+        },
+        modelUrl &&
+          createElement("a-gltf-model", {
+            src: `#character-model-${entry.id}`,
+            position: "0 0 0",
+            rotation: "60 0 0",
+            scale: "1 1 1",
+            "animation-mixer":
+              "clip: pm0149_00_00_20001_battlewait01_loop; loop: repeat",
+          })
+      );
+    })
   );
 };

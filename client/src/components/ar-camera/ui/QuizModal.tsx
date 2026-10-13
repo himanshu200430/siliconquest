@@ -31,7 +31,7 @@ export const QuizModal = ({
   const hasContent = imageSrc || displayAsText;
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center p-4 bg-black/40 backdrop-blur-md overflow-y-auto z-50">
+    <div className="absolute inset-0 flex items-center justify-center p-4 bg-black/40 backdrop-blur-md overflow-y-auto z-[60] pointer-events-auto">
       <div
         className={`relative bg-slate-900/30 backdrop-blur-xl border-2 border-${themeColor.primary}/50 rounded-xl p-6 max-w-lg w-full shadow-2xl shadow-${themeColor.glow} animate-scaleIn my-auto max-h-[90vh] overflow-y-auto`}
         onContextMenu={(e) => e.preventDefault()} // Prevent right-click context menu
@@ -131,11 +131,11 @@ export const QuizModal = ({
           <h3
             className={`text-md text-${themeColor.primary} mb-4 text-center select-none`}
           >
-            {character.question}
+            {character.question || "Loading quiz..."}
           </h3>
 
           <div className="space-y-3 text-sm select-none">
-            {character.options.map((option, index) => {
+            {(character.options || []).map((option, index) => {
               const isSelected = selectedAnswer === index;
               const isCorrect = quizResult === "correct" && isSelected;
               const isIncorrect = quizResult === "incorrect" && isSelected;

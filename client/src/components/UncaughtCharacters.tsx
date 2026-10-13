@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { getUncaughtCards } from "@/services/firestore";
+import { getUncaughtCards } from "@/services/api";
+import { usePolling } from "@/hooks/usePolling";
 import { getImageSrc, shouldDisplayAsText } from "@/utils/imageUtils";
+import { PokeballLoader } from "@/components/ui/PokeballLoader";
 import type { Card } from "@/types";
 
 interface UncaughtCharactersProps {
@@ -40,6 +42,12 @@ export default function UncaughtCharacters({
       fetchUncaughtCards();
     }
   }, [isOpen, fetchUncaughtCards]);
+
+  usePolling(fetchUncaughtCards, {
+    intervalMs: 10000,
+    jitterMs: 3000,
+    enabled: isOpen,
+  });
 
   const getTierColor = (tier?: string) => {
     switch (tier) {
@@ -84,8 +92,14 @@ export default function UncaughtCharacters({
             Characters Left to Hunt
           </h2>
           <button
-            onClick={onClose}
-            className="w-10 h-10 rounded-full bg-red-500/20 border-2 border-red-400 flex items-center justify-center text-red-400 hover:bg-red-500/30 transition-all"
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              onClose();
+            }}
+            className="w-10 h-10 rounded-full bg-red-500/20 border-2 border-red-400 flex items-center justify-center text-red-400 hover:bg-red-500/40 hover:border-red-300 hover:text-white active:scale-90 transition-all cursor-pointer pointer-events-auto touch-manipulation shadow-lg"
+            aria-label="Close modal"
           >
             <svg
               className="w-5 h-5"
@@ -107,10 +121,11 @@ export default function UncaughtCharacters({
         <div className="flex-1 overflow-y-auto pr-2 scrollbar-thin">
           {loading ? (
             <div className="flex items-center justify-center py-12">
-              <div className="text-center">
-                <div className="w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                <p className="text-purple-300">Loading characters...</p>
-              </div>
+              <PokeballLoader
+                size="lg"
+                label="SCANNING WILD POKÉMON"
+                sublabel="Querying uncaught cards from database..."
+              />
             </div>
           ) : error ? (
             <div className="text-center py-12">

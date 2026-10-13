@@ -1,13 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
-import { catchCharacter, getCharacterById } from "@/services/firestore";
-import {
-  clearCooldown,
-  getCooldownRemaining,
-  setWrongAnswerCooldown,
-} from "@/utils/quizCooldown";
+import { getCards, getCardQuiz, submitCatch } from "@/services/api";
 import { useARCharacters } from "./ar-camera/hooks/useARCharacters";
 import { useMindARInlineStyles } from "./ar-camera/hooks/useMindARInlineStyles";
 import { useMindARScripts } from "./ar-camera/hooks/useMindARScripts";
@@ -20,6 +16,11 @@ import { LoadingOverlay } from "./ar-camera/ui/LoadingOverlay";
 import { MindARScene } from "./ar-camera/ui/MindARScene";
 import { QuizModal } from "./ar-camera/ui/QuizModal";
 import { ScanHint } from "./ar-camera/ui/ScanHint";
+import { initTargetCache } from "./ar-camera/utils/mindTargetCache";
+import {
+  initCameraStreamNormalizer,
+  stopAllCameraStreams,
+} from "./ar-camera/utils/cameraStreamHelper";
 import {
   ARCameraProps,
   Character,
@@ -27,6 +28,16 @@ import {
   MindARSceneElement,
   Tier,
 } from "./ar-camera/types";
+import targetMapData from "@/data/targetMap.json";
+
+interface TargetMapItem {
+  id: string;
+  name: string;
+  series: string;
+  tier: string;
+  value: number;
+  image: string;
+}
 
 export default function ARCamera({
   teamName,
@@ -35,8 +46,7 @@ export default function ARCamera({
   onCharacterCollected,
 }: ARCameraProps) {
   const {
-    charactersByTier,
-    loading: loadingCharacters,
+    allCharacters,
     error: charactersError,
     refetch,
   } = useARCharacters();
@@ -61,8 +71,10 @@ export default function ARCamera({
     null
   );
   const [isSceneReady, setIsSceneReady] = useState(false);
+  const [isCameraLive, setIsCameraLive] = useState(false);
+  const [sceneKey, setSceneKey] = useState(0);
+  const [mounted, setMounted] = useState(false);
   const [isCatching, setIsCatching] = useState(false);
-  const [selectedTier, setSelectedTier] = useState<Tier>("Common");
   const [cooldownSeconds, setCooldownSeconds] = useState<number | null>(null);
   const cooldownIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const showQuizRef = useRef(false);
@@ -71,67 +83,82 @@ export default function ARCamera({
     targetIndex: number;
   } | null>(null);
 
+  // Debouncing refs
+  const lastScanTimestampRef = useRef<number>(0);
+  const lostDebounceTimerRef = useRef<NodeJS.Timeout | null>(null);
+
   const { scriptsLoaded, animationMixerAvailable, arError, setARError } =
     useMindARScripts();
 
   useMindARInlineStyles(scriptsLoaded);
 
-  // Update character map whenever tier data changes
+  // Build character map combining database records and targetMap defaults
   useEffect(() => {
     const newMap = new Map<string, Character>();
-    Object.values(charactersByTier)
-      .flat()
-      .forEach((char) => {
-        newMap.set(char.id, char);
-      });
-    charactersMapRef.current = newMap;
-  }, [charactersByTier]);
 
-  // Show error if characters failed to load or have missing fields
+    // 1. Populate from targetMap.json as baseline
+    Object.values(targetMapData as Record<string, TargetMapItem>).forEach(
+      (item) => {
+        newMap.set(item.id, {
+          id: item.id,
+          name: item.name,
+          value: item.value,
+          tier: item.tier as Tier,
+          image: item.image,
+          isCaught: false,
+        });
+      }
+    );
+
+    // 2. Overlay live database records (caught status, custom models, etc.)
+    allCharacters.forEach((char) => {
+      const existing = newMap.get(char.id);
+      newMap.set(char.id, {
+        ...(existing || {}),
+        ...char,
+        tier: char.tier || (existing?.tier as Tier) || getTierFromValue(char.value),
+      });
+    });
+
+    charactersMapRef.current = newMap;
+  }, [allCharacters]);
+
+  // Show error if characters failed to load
   useEffect(() => {
     if (charactersError) {
       setARError(charactersError);
-    } else if (!loadingCharacters) {
-      const totalCharacters = Object.values(charactersByTier).flat().length;
-      if (totalCharacters === 0) {
-        setARError(
-          "No AR characters configured. Please add required fields to Firestore documents. " +
-            "See FIRESTORE_SCHEMA.md for details."
-        );
-      }
     }
-  }, [charactersError, loadingCharacters, charactersByTier, setARError]);
+  }, [charactersError, setARError]);
 
   useEffect(() => {
     showQuizRef.current = showQuiz;
   }, [showQuiz]);
 
-  const stopMindAR = useCallback(() => {
-    const sceneEl = sceneRef.current;
-    if (!sceneEl) return;
-
-    try {
-      const mindarComponent = sceneEl.components?.["mindar-image-system"];
-      if (mindarComponent && typeof mindarComponent.stop === "function") {
-        mindarComponent.stop();
+  useEffect(() => {
+    setMounted(true);
+    initCameraStreamNormalizer();
+    initTargetCache();
+    return () => {
+      stopAllCameraStreams();
+      if (lostDebounceTimerRef.current) {
+        clearTimeout(lostDebounceTimerRef.current);
       }
-    } catch (error) {
-      console.warn("MindAR stop error", error);
-    }
+    };
   }, []);
 
-  useEffect(() => stopMindAR, [stopMindAR]);
-
-  // Cooldown timer management
-  const startCooldownTimer = useCallback((characterId: string) => {
+  // Cooldown timer management (server-backed countdown)
+  const startCooldownTimer = useCallback((seconds: number) => {
     if (cooldownIntervalRef.current) {
       clearInterval(cooldownIntervalRef.current);
       cooldownIntervalRef.current = null;
     }
 
-    const updateCooldown = () => {
-      const remaining = getCooldownRemaining(characterId);
-      if (remaining === null) {
+    const targetTime = Date.now() + seconds * 1000;
+    setCooldownSeconds(seconds);
+
+    cooldownIntervalRef.current = setInterval(() => {
+      const remaining = Math.max(0, Math.ceil((targetTime - Date.now()) / 1000));
+      if (remaining <= 0) {
         setCooldownSeconds(null);
         if (cooldownIntervalRef.current) {
           clearInterval(cooldownIntervalRef.current);
@@ -140,13 +167,7 @@ export default function ARCamera({
       } else {
         setCooldownSeconds(remaining);
       }
-    };
-
-    // Update immediately
-    updateCooldown();
-
-    // Then update every second
-    cooldownIntervalRef.current = setInterval(updateCooldown, 1000);
+    }, 1000);
   }, []);
 
   const clearCooldownTimer = useCallback(() => {
@@ -166,21 +187,15 @@ export default function ARCamera({
     };
   }, []);
 
-  // Reset detection state when tier changes
-  useEffect(() => {
-    activeTargetRef.current = null;
-    setDetectedCharacter(null);
-    setShowQuiz(false);
-    setSelectedAnswer(null);
-    setQuizResult(null);
-    clearCooldownTimer();
-    stopMindAR();
-  }, [selectedTier, stopMindAR, clearCooldownTimer]);
-
   const handleSceneReady = useCallback(() => {
+    setIsCameraLive(true);
     setIsSceneReady(true);
     setARError(null);
   }, [setARError]);
+
+  const handleCameraLive = useCallback(() => {
+    setIsCameraLive(true);
+  }, []);
 
   const handleSceneError = useCallback(
     (message: string) => {
@@ -193,9 +208,13 @@ export default function ARCamera({
     sceneRef,
     scriptsLoaded,
     handleSceneReady,
-    handleSceneError
+    handleSceneError,
+    undefined,
+    handleCameraLive,
+    sceneKey
   );
 
+  // Register target reference and handle targetFound / targetLost with debouncing
   const registerTargetRef = useCallback(
     (characterId: string, targetIndex: number) => {
       return (el: Element | null) => {
@@ -219,36 +238,78 @@ export default function ARCamera({
           targetRefs.current[key] = el;
 
           const onFound = () => {
-            const character = charactersMapRef.current.get(characterId);
-            if (!character) return;
-
-            // Check if character is on cooldown
-            const cooldown = getCooldownRemaining(characterId);
-            if (cooldown !== null) {
-              setCooldownSeconds(cooldown);
-              startCooldownTimer(characterId);
+            // Cancel any pending targetLost debounce
+            if (lostDebounceTimerRef.current) {
+              clearTimeout(lostDebounceTimerRef.current);
+              lostDebounceTimerRef.current = null;
             }
+
+            const now = Date.now();
+            // Debounce rapid re-triggers within 500ms for the same target
+            if (
+              activeTargetRef.current?.characterId === characterId &&
+              now - lastScanTimestampRef.current < 500
+            ) {
+              return;
+            }
+            lastScanTimestampRef.current = now;
+
+            const character =
+              charactersMapRef.current.get(characterId) || {
+                id: characterId,
+                name: "Character",
+                value: 10,
+                tier: "Common" as Tier,
+                isCaught: false,
+              };
 
             activeTargetRef.current = { characterId, targetIndex };
             setDetectedCharacter(character);
             setShowQuiz(false);
             setSelectedAnswer(null);
             setQuizResult(null);
+
+            // Step 4.2: Verify card copies & caught status via GET /api/cards
+            getCards()
+              .then((cardsList) => {
+                const fresh = cardsList.find((c) => c.id === characterId);
+                if (fresh) {
+                  setDetectedCharacter((prev) =>
+                    prev && prev.id === characterId
+                      ? {
+                          ...prev,
+                          copiesLeft: (fresh as unknown as { copiesLeft?: number }).copiesLeft,
+                          isCaught: fresh.isCaught || (fresh as unknown as { copiesLeft?: number }).copiesLeft === 0,
+                          caughtByTeam: fresh.caughtByTeam || undefined,
+                        }
+                      : prev
+                  );
+                }
+              })
+              .catch((err) => {
+                console.warn("Card freshness check failed:", err);
+              });
           };
 
           const onLost = () => {
-            if (
-              activeTargetRef.current?.characterId === characterId &&
-              activeTargetRef.current?.targetIndex === targetIndex &&
-              !showQuizRef.current
-            ) {
-              activeTargetRef.current = null;
-              setDetectedCharacter((current) =>
-                current?.id === characterId ? null : current
-              );
-              // Clear cooldown timer when target is lost
-              clearCooldownTimer();
+            // Debounce targetLost: ignore quick flicker (800ms threshold)
+            if (lostDebounceTimerRef.current) {
+              clearTimeout(lostDebounceTimerRef.current);
             }
+
+            lostDebounceTimerRef.current = setTimeout(() => {
+              if (
+                activeTargetRef.current?.characterId === characterId &&
+                activeTargetRef.current?.targetIndex === targetIndex &&
+                !showQuizRef.current
+              ) {
+                activeTargetRef.current = null;
+                setDetectedCharacter((current) =>
+                  current?.id === characterId ? null : current
+                );
+                clearCooldownTimer();
+              }
+            }, 800);
           };
 
           el.addEventListener("targetFound", onFound);
@@ -259,7 +320,7 @@ export default function ARCamera({
         }
       };
     },
-    [clearCooldownTimer, startCooldownTimer]
+    [clearCooldownTimer]
   );
 
   useEffect(() => {
@@ -276,11 +337,37 @@ export default function ARCamera({
     };
   }, []);
 
-  const handleCollectClick = () => {
-    if (detectedCharacter?.isCaught) return;
-    // Don't allow starting quiz if on cooldown
+  const handleCollectClick = async () => {
+    if (!detectedCharacter) return;
+    if (detectedCharacter.isCaught || (detectedCharacter.copiesLeft !== undefined && detectedCharacter.copiesLeft <= 0)) {
+      setARError("No copies left or already caught!");
+      return;
+    }
     if (cooldownSeconds !== null && cooldownSeconds > 0) return;
-    setShowQuiz(true);
+
+    try {
+      // Step 4.3: Fetch quiz dynamically from GET /api/cards/[id]/quiz
+      const quizData = await getCardQuiz(detectedCharacter.id);
+      setDetectedCharacter((prev) =>
+        prev
+          ? {
+              ...prev,
+              ...quizData,
+              tier: quizData.tier as Tier,
+            }
+          : null
+      );
+      setShowQuiz(true);
+    } catch (err: unknown) {
+      const errorObj = err as { status?: number; data?: { noCopiesLeft?: boolean; error?: string } };
+      if (errorObj?.status === 409 || errorObj?.data?.noCopiesLeft) {
+        setARError("No copies left for this character!");
+        setDetectedCharacter((prev) => (prev ? { ...prev, isCaught: true } : null));
+        refetch();
+      } else {
+        setARError("Failed to load quiz question. Please try again.");
+      }
+    }
   };
 
   const handleAnswerSelect = (index: number) => {
@@ -292,55 +379,50 @@ export default function ARCamera({
   const handleSubmitQuiz = async () => {
     if (selectedAnswer === null || !detectedCharacter || isCatching) return;
 
-    if (selectedAnswer === detectedCharacter.correctAnswer) {
-      setQuizResult("correct");
-      setIsCatching(true);
+    setIsCatching(true);
 
-      try {
-        // Clear cooldown on correct answer
-        clearCooldown(detectedCharacter.id);
+    try {
+      // Step 4.4: Call POST /api/catch { teamId, cardId, answerIndex }
+      const result = await submitCatch(teamId, detectedCharacter.id, selectedAnswer);
+
+      // Handle 409 Conflict
+      if (result.alreadyCaught) {
+        setARError("Your team has already caught this character!");
+        setQuizResult(null);
+        setIsCatching(false);
+        setShowQuiz(false);
+        refetch();
+        return;
+      }
+
+      if (result.noCopiesLeft) {
+        setARError("All copies of this character have already been caught!");
+        setQuizResult(null);
+        setIsCatching(false);
+        setShowQuiz(false);
+        setDetectedCharacter((prev) => (prev ? { ...prev, isCaught: true } : null));
+        refetch();
+        return;
+      }
+
+      // Handle 429 Rate Limit (Locked until)
+      if (result.remainingSeconds && result.remainingSeconds > 0 && !result.correct) {
+        setQuizResult("incorrect");
+        startCooldownTimer(result.remainingSeconds);
+        setTimeout(() => {
+          setQuizResult(null);
+          setSelectedAnswer(null);
+          setShowQuiz(false);
+          setIsCatching(false);
+        }, 1500);
+        return;
+      }
+
+      // Handle Correct Answer
+      if (result.correct || result.success) {
+        setQuizResult("correct");
         clearCooldownTimer();
 
-        // Update Firestore: mark character as caught and update team
-        // This uses a transaction to prevent race conditions
-        const result = await catchCharacter(
-          detectedCharacter.id,
-          teamId,
-          detectedCharacter.value
-        );
-
-        // Check if the character was already caught by another team
-        if (!result.success && result.alreadyCaught) {
-          console.log(
-            `Character already caught by team: ${result.caughtByTeam}`
-          );
-
-          // Fetch the fresh character data from Firestore to get the updated caught status
-          const freshCharacter = await getCharacterById(detectedCharacter.id);
-          console.log("Fresh character data:", freshCharacter);
-
-          if (freshCharacter) {
-            // Update the detected character state with fresh data
-            setDetectedCharacter(freshCharacter);
-          }
-
-          // Reset quiz state
-          setQuizResult(null);
-          setIsCatching(false);
-          setShowQuiz(false);
-
-          // Show error message after a brief delay to let the UI update
-          setTimeout(() => {
-            setARError(`This character was just caught by another team!`);
-          }, 300);
-
-          // Also refresh the full character list
-          refetch();
-
-          return;
-        }
-
-        // Notify parent component and close AR camera
         setTimeout(() => {
           onCharacterCollected({
             id: detectedCharacter.id,
@@ -352,37 +434,33 @@ export default function ARCamera({
             value: detectedCharacter.value,
           });
 
-          // Refresh character list to reflect caught status
           refetch();
-
-          // Close AR camera and return to home page
           handleClose();
         }, 1200);
-      } catch (error) {
-        console.error("Error catching character:", error);
-        setQuizResult(null);
-        setIsCatching(false);
-        setARError("Failed to catch character. Please try again.");
+      } else {
+        // Wrong Answer with progressive server cooldown
+        setQuizResult("incorrect");
+        if (result.cooldownSeconds) {
+          startCooldownTimer(result.cooldownSeconds);
+        }
+
+        setTimeout(() => {
+          setQuizResult(null);
+          setSelectedAnswer(null);
+          setShowQuiz(false);
+          setIsCatching(false);
+        }, 1500);
       }
-    } else {
-      setQuizResult("incorrect");
-
-      // Set progressive cooldown for wrong answer
-      const cooldownDuration = setWrongAnswerCooldown(detectedCharacter.id);
-      console.log(`Wrong answer! Cooldown set for ${cooldownDuration} seconds`);
-
-      setTimeout(() => {
-        setQuizResult(null);
-        setSelectedAnswer(null);
-        setShowQuiz(false);
-        // Start cooldown timer
-        startCooldownTimer(detectedCharacter.id);
-      }, 1500);
+    } catch (error) {
+      console.error("Error submitting catch:", error);
+      setQuizResult(null);
+      setIsCatching(false);
+      setARError("Failed to catch character. Please try again.");
     }
   };
 
   const handleClose = useCallback(() => {
-    stopMindAR();
+    stopAllCameraStreams();
     clearCooldownTimer();
     activeTargetRef.current = null;
     setDetectedCharacter(null);
@@ -390,49 +468,68 @@ export default function ARCamera({
     setSelectedAnswer(null);
     setQuizResult(null);
     onClose();
-  }, [onClose, stopMindAR, clearCooldownTimer]);
+  }, [onClose, clearCooldownTimer]);
 
-  const currentTierCharacters = charactersByTier[selectedTier];
+  if (!mounted || typeof document === "undefined") {
+    return null;
+  }
 
-  return (
-    <div className="fixed inset-0 bg-black z-50 flex flex-col">
-      <div className="relative flex-1 overflow-hidden">
-        {(!scriptsLoaded || loadingCharacters) && !arError && (
-          <LoadingOverlay />
+  const currentTier = detectedCharacter
+    ? detectedCharacter.tier || getTierFromValue(detectedCharacter.value)
+    : "Common";
+
+  return createPortal(
+    <>
+      {/* 1. Solid Backdrop */}
+      <div className="fixed inset-0 z-[40] bg-slate-950 pointer-events-none" />
+
+      {/* 2. MindAR 3D Scene: Single combined scene with cards.mind */}
+      {scriptsLoaded && !arError && (
+        <div className="fixed inset-0 w-full h-full z-[44]">
+          <MindARScene
+            key={sceneKey}
+            sceneRef={sceneRef}
+            characters={allCharacters}
+            animationMixerAvailable={animationMixerAvailable}
+            registerTargetRef={registerTargetRef}
+          />
+        </div>
+      )}
+
+      {/* 3. HUD UI & Modals */}
+      <div className="fixed inset-0 z-[50] flex flex-col overflow-hidden pointer-events-none select-none">
+        {/* Loading Overlay */}
+        {(!scriptsLoaded || (!isSceneReady && !arError)) && (
+          <div className="pointer-events-auto">
+            <LoadingOverlay tier={currentTier} isCameraLive={isCameraLive} />
+          </div>
         )}
 
-        {arError && <ARErrorOverlay message={arError} onClose={handleClose} />}
+        {/* Camera Error Overlay */}
+        {arError && (
+          <div className="pointer-events-auto">
+            <ARErrorOverlay
+              message={arError}
+              onClose={handleClose}
+              onRetry={async () => {
+                setARError(null);
+                setIsSceneReady(false);
+                setIsCameraLive(false);
+                stopAllCameraStreams();
+                // Enforce driver buffer for Windows / OS webcam release
+                await new Promise((resolve) => setTimeout(resolve, 350));
+                setSceneKey((prev) => prev + 1);
+              }}
+            />
+          </div>
+        )}
 
-        {scriptsLoaded &&
-          !arError &&
-          !loadingCharacters &&
-          currentTierCharacters.length > 0 && (
-            <div className="absolute inset-0 w-[100vw] h-[100vh] sm:mx-0 mx-[30vw]">
-              <MindARScene
-                key={selectedTier}
-                sceneRef={sceneRef}
-                characters={currentTierCharacters}
-                animationMixerAvailable={animationMixerAvailable}
-                registerTargetRef={registerTargetRef}
-                selectedTier={selectedTier}
-              />
-            </div>
-          )}
-
-        <HeaderOverlay
-          teamName={teamName}
-          onClose={handleClose}
-          mindFiles={[
-            { value: "Common", label: "Common" },
-            { value: "Rare", label: "Rare" },
-            { value: "Legendary", label: "Legendary" },
-          ]}
-          activeMindFile={selectedTier}
-          onMindFileChange={(tier) => setSelectedTier(tier as Tier)}
-        />
-        <FrameOverlay tier={selectedTier} />
+        {/* HUD Header */}
+        <HeaderOverlay teamName={teamName} onClose={handleClose} />
+        <FrameOverlay tier={currentTier} />
         <ScanHint visible={!detectedCharacter && isSceneReady && !showQuiz} />
 
+        {/* Detected Character Overlay */}
         {detectedCharacter && !showQuiz && (
           <DetectedCharacterOverlay
             character={detectedCharacter}
@@ -442,6 +539,7 @@ export default function ARCamera({
           />
         )}
 
+        {/* Quiz Modal */}
         {showQuiz && detectedCharacter && (
           <QuizModal
             character={detectedCharacter}
@@ -457,6 +555,7 @@ export default function ARCamera({
           />
         )}
       </div>
-    </div>
+    </>,
+    document.body
   );
 }
