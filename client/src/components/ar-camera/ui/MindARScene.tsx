@@ -32,8 +32,8 @@ export const MindARScene = ({
   // animationMixerAvailable,
   registerTargetRef,
 }: MindARSceneProps) => {
-  // Option A: Single combined target file containing all 99 scannable cards (v1 tightly cropped artwork)
-  const targetSrc = useMemo(() => "/ar-targets/cards.v1.mind", []);
+  // Option A: Single combined target file containing all 99 scannable cards
+  const targetSrc = useMemo(() => "/ar-targets/cards.mind", []);
 
   // Map of 3D models if provided
   const modelMap = useMemo(() => {
@@ -51,8 +51,8 @@ export const MindARScene = ({
     {
       id: "mindar-scene-all",
       ref: sceneRef,
-      // MindAR configured with maxTrack: 1, fast warmupTolerance (2 frames for instant lock), and cards.v1.mind
-      "mindar-image": `imageTargetSrc: ${targetSrc}; maxTrack: 1; autoStart: false; warmupTolerance: 2; missTolerance: 8; filterMinCF: 0.001; filterBeta: 1000; uiLoading: no; uiScanning: no; uiError: no`,
+      // MindAR configured with maxTrack: 1 and cards.mind
+      "mindar-image": `imageTargetSrc: ${targetSrc}; maxTrack: 1; autoStart: false; filterMinCF: 0.0001; filterBeta: 10; uiLoading: no; uiScanning: no; uiError: no`,
       "color-space": "sRGB",
       renderer:
         "colorManagement: true, physicallyCorrectLights: true, legacyLights: false",
