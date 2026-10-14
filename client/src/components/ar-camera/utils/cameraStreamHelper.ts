@@ -25,6 +25,14 @@ let lastHardwareReleaseTime = 0;
 let acquisitionLock: Promise<MediaStream> | null = null;
 const HARDWARE_COOLDOWN_MS = 350;
 
+const isMobileDevice = (): boolean => {
+  if (typeof navigator === "undefined") return false;
+  const ua = navigator.userAgent || "";
+  const hasTouch = (navigator.maxTouchPoints || 0) > 1;
+  const isMobileUA = /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+  return isMobileUA || (hasTouch && !("MSStream" in (window as unknown as Record<string, unknown>)));
+};
+
 export function initCameraStreamNormalizer() {
   if (typeof window === "undefined" || !navigator?.mediaDevices?.getUserMedia) {
     return;
@@ -35,10 +43,18 @@ export function initCameraStreamNormalizer() {
     return;
   }
 
+  // Ensure webcam tracks are immediately freed on tab close or page navigation
+  window.addEventListener("beforeunload", () => {
+    stopAllCameraStreams();
+  });
+  window.addEventListener("pagehide", () => {
+    stopAllCameraStreams();
+  });
+
   const originalGetUserMedia = mediaDevices.getUserMedia.bind(mediaDevices);
 
   mediaDevices.getUserMedia = async function (
-    constraints?: MediaStreamConstraints
+    _constraints?: MediaStreamConstraints
   ): Promise<MediaStream> {
     // If another acquisition is currently running, wait for it
     while (acquisitionLock) {
@@ -71,18 +87,14 @@ export function initCameraStreamNormalizer() {
 
       // 3. Normalize constraints:
       // MindAR requests { audio: false, video: { facingMode: "environment" } }
-      // On laptops / PCs with only a front webcam, exact facingMode causes OverconstrainedError.
-      // Convert to ideal facingMode:
-      let targetConstraints: MediaStreamConstraints = constraints || {
-        video: true,
-        audio: false,
-      };
+      // On laptops / PCs, requesting facingMode: "environment" triggers Chrome on Windows
+      // to look for an auxiliary/rear camera, frequently grabbing the Windows Hello IR camera
+      // which produces no RGB frames and causes "AbortError: Timeout starting video source".
+      // Therefore, on desktop/laptops, we normalize to generic video without facingMode or resolution locks.
+      const isMobile = isMobileDevice();
 
-      if (
-        targetConstraints.video &&
-        typeof targetConstraints.video === "object" &&
-        "facingMode" in targetConstraints.video
-      ) {
+      let targetConstraints: MediaStreamConstraints;
+      if (isMobile) {
         targetConstraints = {
           audio: false,
           video: {
@@ -91,11 +103,59 @@ export function initCameraStreamNormalizer() {
             height: { ideal: 720 },
           },
         };
+      } else {
+        // On desktop / laptop, request standard video without facingMode or resolution constraints
+        targetConstraints = {
+          audio: false,
+          video: true,
+        };
       }
+
+      const invokeGetUserMediaWithTimeout = (
+        c: MediaStreamConstraints,
+        timeoutMs = 5000
+      ): Promise<MediaStream> => {
+        return new Promise<MediaStream>((resolve, reject) => {
+          let settled = false;
+          const timer = setTimeout(() => {
+            if (!settled) {
+              settled = true;
+              const timeoutErr = new Error(
+                "Timeout starting video source (hardware took too long to deliver frames)"
+              );
+              timeoutErr.name = "AbortError";
+              reject(timeoutErr);
+            }
+          }, timeoutMs);
+
+          originalGetUserMedia(c)
+            .then((stream) => {
+              if (!settled) {
+                settled = true;
+                clearTimeout(timer);
+                resolve(stream);
+              } else {
+                // If timed out previously, release tracks immediately
+                stream.getTracks().forEach((t) => {
+                  try {
+                    t.stop();
+                  } catch {}
+                });
+              }
+            })
+            .catch((err) => {
+              if (!settled) {
+                settled = true;
+                clearTimeout(timer);
+                reject(err);
+              }
+            });
+        });
+      };
 
       // Attempt 1: Requested or normalized constraints
       try {
-        const stream = await originalGetUserMedia(targetConstraints);
+        const stream = await invokeGetUserMediaWithTimeout(targetConstraints, 5000);
         registerStreamTracks(stream);
         return stream;
       } catch (err: unknown) {
@@ -121,12 +181,12 @@ export function initCameraStreamNormalizer() {
           setTimeout(resolve, HARDWARE_COOLDOWN_MS)
         );
 
-        // Attempt 2: Minimal fallback without facingMode constraints
+        // Attempt 2: Minimal fallback without any constraints
         try {
-          const fallbackStream = await originalGetUserMedia({
-            video: true,
-            audio: false,
-          });
+          const fallbackStream = await invokeGetUserMediaWithTimeout(
+            { video: true, audio: false },
+            5000
+          );
           registerStreamTracks(fallbackStream);
           return fallbackStream;
         } catch (fallbackErr: unknown) {
@@ -142,10 +202,10 @@ export function initCameraStreamNormalizer() {
           // Attempt 3: Final retry after cooldown (for laggy Windows webcam drivers)
           await new Promise((resolve) => setTimeout(resolve, 500));
           try {
-            const finalStream = await originalGetUserMedia({
-              video: true,
-              audio: false,
-            });
+            const finalStream = await invokeGetUserMediaWithTimeout(
+              { video: true, audio: false },
+              6000
+            );
             registerStreamTracks(finalStream);
             return finalStream;
           } catch (finalErr) {

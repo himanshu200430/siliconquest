@@ -142,7 +142,7 @@ export const useSceneLifecycle = (
           (typeof detailError === "object" && (detailError as Record<string, unknown>)?.error === "VIDEO_FAIL")
         ) {
           errorMsg =
-            "Camera video source could not be opened. Please ensure camera permission is allowed and no other app is using your webcam.";
+            "Camera could not be started. Please ensure no other app (Zoom, Teams) or browser tab is using your webcam, check that your webcam privacy shutter is open, and click Try Again.";
         } else if (detailError && typeof detailError === "object") {
           const errObj = detailError as { name?: string; message?: string };
           if (
