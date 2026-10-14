@@ -56,7 +56,7 @@ export default function Leaderboard({
               key={team.id}
               ref={team.id === selectedTeamId ? selectedTeamRef : null}
               onClick={() => handleTeamClick(team.id)}
-              className={`bg-gradient-to-r from-slate-800/50 to-slate-700/50 border rounded-xl p-4 transition-all duration-300 ${
+              className={`group bg-gradient-to-r from-slate-800/50 to-slate-700/50 border rounded-xl p-4 transition-all duration-300 ${
                 isSelectable
                   ? "cursor-pointer hover:border-purple-500/50 hover:scale-[1.01]"
                   : ""
@@ -95,11 +95,15 @@ export default function Leaderboard({
                       {team.score}
                     </span>
                   </div>
-                  {team.id === selectedTeamId && (
+                  {team.id === selectedTeamId ? (
                     <div className="text-xs text-purple-400 font-medium">
                       Your Team
                     </div>
-                  )}
+                  ) : isSelectable ? (
+                    <div className="text-xs text-purple-400/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      Click to switch to this team
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>

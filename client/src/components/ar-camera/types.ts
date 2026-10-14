@@ -49,6 +49,7 @@ export interface ARCameraProps {
   teamName: string;
   teamId: string;
   onClose: () => void;
+  onChangeTeam?: () => void;
   onCharacterCollected: (
     character: Pick<Character, "id" | "name" | "value"> & {
       image?: string;

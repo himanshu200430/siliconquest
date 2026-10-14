@@ -56,14 +56,11 @@ export default function Home() {
     enabled: !isARActive,
   });
 
-  // Load selected team from localStorage or default to first available team
+  // Load selected team from localStorage
   useEffect(() => {
     const storedTeamId = localStorage.getItem("selectedTeamId");
     if (storedTeamId) {
       setSelectedTeamId(storedTeamId);
-    } else if (teams.length > 0 && !selectedTeamId) {
-      setSelectedTeamId(teams[0].id);
-      localStorage.setItem("selectedTeamId", teams[0].id);
     }
 
     const handleOpenAdmin = () => setShowAdminPortal(true);
@@ -85,6 +82,17 @@ export default function Home() {
     }
 
     return () => window.removeEventListener("open-admin-portal", handleOpenAdmin);
+  }, []);
+
+  // Validate that stored team ID actually exists in fetched teams
+  useEffect(() => {
+    if (selectedTeamId && teams.length > 0) {
+      const exists = teams.some((t) => t.id === selectedTeamId);
+      if (!exists) {
+        setSelectedTeamId(null);
+        localStorage.removeItem("selectedTeamId");
+      }
+    }
   }, [teams, selectedTeamId]);
 
   const fetchCaughtCharacters = useCallback(async (teamId: string) => {
@@ -147,16 +155,13 @@ export default function Home() {
   const handlePokeballClick = () => {
     if (isPokeballExploding) return;
 
-    let targetTeam = selectedTeam;
-    // Auto-select first team if player hasn't picked one yet so AR launches without friction
-    if (!targetTeam && teams.length > 0) {
-      targetTeam = teams[0];
-      setSelectedTeamId(teams[0].id);
-      localStorage.setItem("selectedTeamId", teams[0].id);
-    }
-
-    if (!targetTeam) {
-      console.warn("No teams available to launch AR camera");
+    if (!selectedTeam) {
+      const selectSection = document.getElementById("select-team-section");
+      if (selectSection) {
+        selectSection.scrollIntoView({ behavior: "smooth" });
+        const input = selectSection.querySelector("input");
+        if (input) input.focus();
+      }
       return;
     }
 
@@ -194,6 +199,14 @@ export default function Home() {
     setCharactersCaught([]);
     setIsARActive(false);
     setTeamSearchQuery(""); // Clear search when changing team
+    setTimeout(() => {
+      const selectSection = document.getElementById("select-team-section");
+      if (selectSection) {
+        selectSection.scrollIntoView({ behavior: "smooth" });
+        const input = selectSection.querySelector("input");
+        if (input) input.focus();
+      }
+    }, 50);
   };
 
   const selectedTeam = teams.find((t) => t.id === selectedTeamId);
@@ -319,7 +332,7 @@ export default function Home() {
 
             {/* Select Your Team - Only shown when no team is selected */}
             {!selectedTeam && (
-              <div className="mb-6">
+              <div id="select-team-section" className="mb-6">
                 <h2 className="text-purple-300 text-center font-semibold mb-4 tracking-wide">
                   Select Your Team
                 </h2>
@@ -527,7 +540,12 @@ export default function Home() {
             )}
 
             {/* Leaderboard */}
-            <Leaderboard teams={teams} selectedTeamId={selectedTeamId} />
+            <Leaderboard
+              teams={teams}
+              selectedTeamId={selectedTeamId}
+              onTeamSelect={handleTeamSelect}
+              isSelectable={true}
+            />
           </main>
         </div>
       </div>
@@ -538,6 +556,7 @@ export default function Home() {
           teamName={(selectedTeam || teams[0]).teamName}
           teamId={(selectedTeam || teams[0]).id}
           onClose={handleARClose}
+          onChangeTeam={handleChangeTeam}
           onCharacterCollected={handleCharacterCollected}
         />
       )}

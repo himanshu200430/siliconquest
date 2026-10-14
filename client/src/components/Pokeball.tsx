@@ -118,7 +118,7 @@ export default function Pokeball({ onClick, isExploding, teamName }: PokeballPro
         <div className="mt-2 text-center">
           <span className="text-[11px] font-bold tracking-widest uppercase text-cyan-400/90 group-hover:text-cyan-300 transition-colors drop-shadow-[0_0_8px_rgba(6,182,212,0.6)] flex items-center gap-1.5">
             <span className="inline-block text-rose-400 animate-anime-spark text-[9px]">✦</span>
-            {teamName ? `HUNT AS ${teamName}` : "TAP POKÉBALL TO HUNT"}
+            {teamName ? `HUNT AS ${teamName}` : "SELECT A TEAM TO HUNT"}
             <span className="inline-block text-amber-300 animate-anime-spark text-[9px]">⚡</span>
           </span>
         </div>

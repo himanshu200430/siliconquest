@@ -1,6 +1,7 @@
 interface HeaderOverlayProps {
   teamName: string;
   onClose: () => void;
+  onChangeTeam?: () => void;
   mindFiles?: Array<{ value: string; label: string }>;
   activeMindFile?: string | null;
   onMindFileChange?: (value: string) => void;
@@ -9,6 +10,7 @@ interface HeaderOverlayProps {
 export const HeaderOverlay = ({
   teamName,
   onClose,
+  onChangeTeam,
   mindFiles,
   activeMindFile,
   onMindFileChange,
@@ -33,7 +35,18 @@ export const HeaderOverlay = ({
         <div className="flex justify-between items-start">
           <div className="pointer-events-auto">
             <h2 className="text-white font-bold text-lg">Hunt is On!!</h2>
-            <p className="text-purple-300 text-sm">Team: {teamName}</p>
+            <div className="flex items-center gap-2 mt-0.5">
+              <p className="text-purple-300 text-sm font-medium">Team: {teamName}</p>
+              {onChangeTeam && (
+                <button
+                  type="button"
+                  onClick={onChangeTeam}
+                  className="px-2 py-0.5 text-xs font-semibold rounded bg-purple-600/70 hover:bg-purple-500 border border-purple-400/50 text-purple-100 hover:text-white transition-all pointer-events-auto cursor-pointer"
+                >
+                  Change
+                </button>
+              )}
+            </div>
           </div>
           {/* Space for close button */}
           <div className="w-10 h-10"></div>

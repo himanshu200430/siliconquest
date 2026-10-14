@@ -43,6 +43,7 @@ export default function ARCamera({
   teamName,
   teamId,
   onClose,
+  onChangeTeam,
   onCharacterCollected,
 }: ARCameraProps) {
   const {
@@ -470,6 +471,11 @@ export default function ARCamera({
     onClose();
   }, [onClose, clearCooldownTimer]);
 
+  const handleChangeTeam = useCallback(() => {
+    handleClose();
+    onChangeTeam?.();
+  }, [handleClose, onChangeTeam]);
+
   if (!mounted || typeof document === "undefined") {
     return null;
   }
@@ -525,7 +531,11 @@ export default function ARCamera({
         )}
 
         {/* HUD Header */}
-        <HeaderOverlay teamName={teamName} onClose={handleClose} />
+        <HeaderOverlay
+          teamName={teamName}
+          onClose={handleClose}
+          onChangeTeam={onChangeTeam ? handleChangeTeam : undefined}
+        />
         <FrameOverlay tier={currentTier} />
         <ScanHint visible={!detectedCharacter && isSceneReady && !showQuiz} />
 
