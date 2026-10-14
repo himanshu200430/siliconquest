@@ -292,7 +292,7 @@ export default function ARCamera({
           };
 
           const onLost = () => {
-            // Debounce targetLost: ignore quick flicker (800ms threshold)
+            // Debounce targetLost: keep popup visible for 5 seconds (5000ms threshold)
             if (lostDebounceTimerRef.current) {
               clearTimeout(lostDebounceTimerRef.current);
             }
@@ -309,7 +309,7 @@ export default function ARCamera({
                 );
                 clearCooldownTimer();
               }
-            }, 800);
+            }, 5000);
           };
 
           el.addEventListener("targetFound", onFound);
