@@ -74,4 +74,10 @@ scripts/patch_worker.py
 scripts/detection/raw_extracted_cards/
 scripts/detection/crops_test/*.png
 !scripts/detection/crops_test/exact_logo_mask.png
+scripts/detection/simulated_variants/
+scripts/detection/feature_audit_v1.json
+scripts/detection/__pycache__/
+__pycache__/
+*.pyc
+client/public/ar-targets/*.v1.mind
 
